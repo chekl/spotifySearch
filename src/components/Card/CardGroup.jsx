@@ -11,7 +11,7 @@ export default function CardGroup({group}) {
       <CardActionArea>
         <CardMedia
           component="img"
-          image={group.images[0].url}
+          image={group.images.length > 0 ? group.images[0].url : "paint.jpg"}
           alt={group.name + " фото гурту"}
         />
         <CardContent>

@@ -13,6 +13,13 @@
 }
 
 .cardImg {
-    height: 150px;
+    height: 100%;
     max-width: 150px;
+}
+
+.genreSpan {
+    background-color: rgb(217, 217, 217);
+    line-height: 2rem;
+    margin-left: 0.2rem;
+    padding: 0.2rem;
 }

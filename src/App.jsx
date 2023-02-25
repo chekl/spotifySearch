@@ -2,8 +2,8 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import Search from './components/Search/Search';
 import CardGroup from './components/Card/CardGroup';
-import { Grid } from '@mui/material';
 import { Header } from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [artist, setArtist] = useState([]);
@@ -36,7 +36,8 @@ function App() {
   }, []);
 
   return (
-    <div className='App'>
+    <>
+      <div className='App'>
       <Header/>
       <div className='info'>
         <p>Привіт! Ми - команда ентузіастів "Hark!". <br/>
@@ -45,20 +46,16 @@ function App() {
         Шукай. Слухай. Поширюй!</p>
       </div>
       <Search setArtist={setArtist} authParam={authParam} />
-      <Grid
-        container
-        spacing={{ xs: 2, md: 3 }}
-        columns={{ xs: 4, sm: 8, md: 12 }}
-      >
         {artist.map((group) => {
           return (
-            <Grid key={group.id} item xs={2} sm={4} md={4}>
-              <CardGroup group={group} />
-            </Grid>
+              <CardGroup key={group.id} group={group} />
           );
         })}
-      </Grid>
+    
     </div>
+    <Footer/>
+    </>
+    
   );
 }
 

@@ -3,25 +3,29 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
+import { CardActionArea, Box } from '@mui/material';
+import "./CardGroup.css"
 
 export default function CardGroup({group}) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
+    <Card className="card">
+      <CardActionArea >
+      <Box className="cardContent">
         <CardMedia
           component="img"
           image={group.images.length > 0 ? group.images[0].url : "paint.jpg"}
           alt={group.name + " фото гурту"}
+          className='cardImg'
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+                 <CardContent>
+          <h2>
           {group.name}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {group.followers.total}
-          </Typography>
-        </CardContent>
+          </h2>
+          <p>
+            Кількість підписників: {group.followers.total} <br/>
+          </p>
+        </CardContent> 
+      </Box>
       </CardActionArea>
     </Card>
   );

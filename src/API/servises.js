@@ -1,21 +1,16 @@
-async function getArtistId(searchInput, setArtist, authParam) {
+async function getArtistById(id, authParam) {
 
     return await fetch(
-    `https://api.spotify.com/v1/search?q=${searchInput}&type=artist`,
+    `https://api.spotify.com/v1/artists/${id}`,
     authParam
   )
     .then((result) => result.json())
-    .then((data) => {
-      setArtist(data.artists.items[0]);
-      return data.artists.items[0].id;
-    });
+    .then((data) => data);
 }
 
-async function getArtistAlbums(authParam) {
+async function getArtistAlbums(id, authParam) {
   return await fetch(
-    'https://api.spotify.com/v1/artists/' +
-      getArtistId() +
-      '/albums?include_groups=album&market=US&limit=50',
+    `https://api.spotify.com/v1/artists/${id}/albums?include_groups=album&market=US&limit=50`,
       authParam
   )
     .then((response) => response.json())
@@ -31,4 +26,4 @@ async function getArtistsByGenre(setArtist, searchInput, authParam) {
     .then((data) => setArtist(data.artists.items));
 }
 
-export { getArtistsByGenre, getArtistAlbums, getArtistId };
+export { getArtistsByGenre, getArtistAlbums, getArtistById };

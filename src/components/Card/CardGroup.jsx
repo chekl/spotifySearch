@@ -4,11 +4,12 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { CardActionArea, Box } from '@mui/material';
 import './CardGroup.css';
+import { Link } from 'react-router-dom';
 
 export default function CardGroup({ group }) {
   return (
     <Card className='card'>
-      <CardActionArea>
+      <CardActionArea component={Link} to={`/${group.id}`}>
         <Box className='cardContent'>
           <CardMedia
             component='img'

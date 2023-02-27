@@ -13,6 +13,7 @@ import useAuthParam from '../../helper/useAuthParam';
 export default function Search({ setArtist}) {
   const [searchInput, setSearchInput] = useState('');
   let authParam = useAuthParam();
+  localStorage.setItem("token", JSON.stringify(authParam));
 
   return (
     <Paper elevation={3} className="container">

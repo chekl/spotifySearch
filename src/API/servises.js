@@ -22,7 +22,14 @@ async function getArtistsByGenre(setArtist, searchInput, authParam) {
     authParam
   )
     .then((result) => result.json())
-    .then((data) => setArtist(data.artists.items));
+    .then((data) => {
+      if(data.artists.items.length > 0) {
+        let ukrainians = data.artists.items.filter((item) => {
+          return item.genres.some(genre => genre.includes('ukrainian'));
+        });
+        setArtist(ukrainians)
+      }
+    });
 }
 
 export { getArtistsByGenre, getArtistAlbums, getArtistById };

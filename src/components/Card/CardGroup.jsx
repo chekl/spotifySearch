@@ -24,7 +24,7 @@ export default function CardGroup({ group }) {
               </p>
               <p>Жанр виконання: {group.genres.length !== 0 ? group.genres.map((genre, index) => {
                 if(index < 9) {
-                  return <span className='genreSpan'>{genre}</span>
+                  return <span key={genre} className='genreSpan'>{genre}</span>
                 }
               }) : <span className='genreSpan'>відсутній</span>
               }

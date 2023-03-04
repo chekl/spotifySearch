@@ -1,36 +1,37 @@
-import React from 'react'
-import {useParams} from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import { useParams, Link } from 'react-router-dom';
 import { getArtistById, getArtistAlbums } from '../../API/servises';
-import { useEffect, useState } from 'react';
-import { Skeleton } from '@mui/material';
-import {Header} from "../../components/Header/Header"
-import {Link} from "react-router-dom"
+import SkeletonArtist from '../../components/SkeletonArtist/SkeletonArtist';
+import { Header } from '../../components/Header/Header';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import { Paper } from '@mui/material';
 
 const ArtistPage = () => {
-    let { id } = useParams();
-    const authParam = JSON.parse(localStorage.getItem("token"));
-    const [artist, setArtist] = useState({});
-    const [albums, setAlbums] = useState({});
+  let { id } = useParams();
+  const authParam = JSON.parse(localStorage.getItem('token'));
+  const [artist, setArtist] = useState({});
+  const [albums, setAlbums] = useState({});
 
-    useEffect(() => {
-      Promise.all([
-        getArtistById(id, authParam),
-        getArtistAlbums(id, authParam)
-      ]).then(([artistData, albumData]) => {
+  useEffect(() => {
+    Promise.all([getArtistById(id, authParam), getArtistAlbums(id, authParam)])
+      .then(([artistData, albumData]) => {
         setArtist(artistData);
         setAlbums(albumData);
-      }).catch(error => console.error(error));
-    }, []);
+      })
+      .catch((error) => console.error(error));
+  }, []);
 
-    return (
-      <>
-      <Header/>
-      <Link to=".." relative="path">Back to Search</Link>
+  return (
+    <>
+      <Header />
+      <Paper>
+        <Link to='..' relative='path'>
+          Back to Search
+        </Link>
         {Object.keys(artist).length > 0 ? (
           <>
-          <br/>
-            <img alt={artist.name + ' фото гурту'} src={artist.images[0].url}/>
+            <br />
+            <img alt={artist.name + ' фото гурту'} src={artist.images[0].url} />
             <h2>{artist.name}</h2>
             <p>Кількість підписників: {artist.followers.total}</p>
             <p>Жанр виконання: {artist.genres}</p>
@@ -39,13 +40,21 @@ const ArtistPage = () => {
               <ul>
                 {albums.map((album) => (
                   <div key={album.id}>
-                  <img src={album.images.length > 0 ? album.images[0].url : 'noimage.png'} alt={album.name + ' фото гурту'}/>
-                   <p>{album.name}</p>
-                   <p><CalendarTodayIcon/>{album.release_date}</p>
-                   <p>Загальна кількість треків: {album.total_tracks}</p>
-
+                    <img
+                      src={
+                        album.images.length > 0
+                          ? album.images[0].url
+                          : 'noimage.png'
+                      }
+                      alt={album.name + ' фото гурту'}
+                    />
+                    <p>{album.name}</p>
+                    <p>
+                      <CalendarTodayIcon />
+                      {album.release_date}
+                    </p>
+                    <p>Загальна кількість треків: {album.total_tracks}</p>
                   </div>
-                  
                 ))}
               </ul>
             ) : (
@@ -53,16 +62,11 @@ const ArtistPage = () => {
             )}
           </>
         ) : (
-          <>
-          <Skeleton variant="rectangular" width={300} height={400} />
-          <Skeleton variant="rectangular" width={20} height={60} />
-          <Skeleton variant="rectangular" width={60} height={60} />            
-          </>
-
+          <SkeletonArtist />
         )}
-      </>
-    );
-    
-}
+      </Paper>
+    </>
+  );
+};
 
-export default ArtistPage
+export default ArtistPage;

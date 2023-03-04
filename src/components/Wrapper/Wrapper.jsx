@@ -16,6 +16,18 @@ const Element = () => {
       { 
         path: ":id", 
         element: <ArtistPage /> 
+      },
+      {
+        path: "/about",
+        element: <div>about</div>
+      },
+      { 
+        path: "/artisles", 
+        element: <div>articles</div>
+      },
+      { 
+        path: "/artisles:id", 
+        element: <div>articles:id</div> 
       }, 
     ]);
   

@@ -26,7 +26,7 @@ const Element = () => {
       element: <ArtistPage />,
     },
     {
-      path: '/artisles:id',
+      path: '/artisles/:id',
       element: <ArticlePage />,
     },
   ]);

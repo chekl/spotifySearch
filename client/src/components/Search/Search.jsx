@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Paper, InputBase, IconButton } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import { useState } from 'react';
-import { getArtistsByGenre } from '../../API/servises';
+import { getArtistsByGenre } from '../../API/spotifyServises';
 import './Search.css';
 import useAuthParam from '../../hooks/useAuthParam';
 

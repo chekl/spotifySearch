@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getArtistById, getArtistAlbums } from '../../API/servises';
+import { getArtistById, getArtistAlbums } from '../../API/spotifyServises';
 import SkeletonArtist from '../../components/SkeletonArtist/SkeletonArtist';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import { Paper } from '@mui/material';

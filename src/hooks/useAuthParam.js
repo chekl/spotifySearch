@@ -4,7 +4,7 @@ export default function useAuthParam() {
   const CLIENT_SECRET = '63d62680931144f3a00b19da7d6ee635';
   const CLIENT_ID = '15cc4419693b4d45a589f172089327b6';
   const [authParam, setAuthParam] = useState({});
-  
+
   useEffect(() => {
     // access token
     let param = {

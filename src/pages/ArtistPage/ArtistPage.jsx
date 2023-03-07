@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { getArtistById, getArtistAlbums } from '../../API/servises';
 import SkeletonArtist from '../../components/SkeletonArtist/SkeletonArtist';
-import { Header } from '../../components/Header/Header';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import { Paper } from '@mui/material';
+import BackLink from '../../components/BackLink/BackLink';
+import Layout from '../../components/Layout/Layout';
 
 const ArtistPage = () => {
   let { id } = useParams();
@@ -22,12 +23,9 @@ const ArtistPage = () => {
   }, []);
 
   return (
-    <>
-      <Header />
+    <Layout>
       <Paper>
-        <Link to='..' relative='path'>
-          Back to Search
-        </Link>
+        <BackLink />
         {Object.keys(artist).length > 0 ? (
           <>
             <br />
@@ -65,7 +63,7 @@ const ArtistPage = () => {
           <SkeletonArtist />
         )}
       </Paper>
-    </>
+    </Layout>
   );
 };
 

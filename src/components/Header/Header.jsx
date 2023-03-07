@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Logo from '../Logo/Logo';
 import './Header.css';
 
 export const Header = () => {
   return (
-    <header className='containerLogo'>
-      <Link to={'/'}>
-        <img src='logo.png' alt='Hark logo' className='logo' />
-      </Link>
+    <header>
+      <Logo />
       <nav>
         <Link to={'/'}>
           <p>Пошук виконавців</p>
@@ -15,7 +14,7 @@ export const Header = () => {
         <Link to={'/about'}>
           <p>Про нас</p>
         </Link>
-        <Link to={'/articles'}>
+        <Link to={'/artisles'}>
           <p>Статті</p>
         </Link>
       </nav>

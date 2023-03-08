@@ -9,7 +9,7 @@ const ArticleListPage = () => {
   const [articles, setArticles] = useState({});
 
   useEffect(()=> {
-    const fetchData = async () => {
+        const fetchData = async () => {
       const data = await getArticles();
       setArticles(data);
     }
@@ -29,9 +29,6 @@ const ArticleListPage = () => {
           захоплюйтеся!
         </p>
       </Paper>
-      <div>
-          {console.log(articles)}
-      </div>
     </Layout>
   );
 };

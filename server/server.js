@@ -1,19 +1,32 @@
 const express = require("express");
-const app = express();
 const cors = require("cors");
-require("dotenv").config({ path: "./config.env" });
+const mongoose = require('mongoose');
+
+require('dotenv').config();
+
+const app = express();
 const port = process.env.PORT || 5000;
+
 app.use(cors());
 app.use(express.json());
-app.use(require("./routes/article"));
-// get driver connection
-const dbo = require("./db/conn");
- 
-app.listen(port, () => {
-  // perform a database connection when server starts
-  dbo.connectToServer(function (err) {
-    if (err) console.error(err);
- 
-  });
-  console.log(`Server is running on port: ${port}`);
+
+const uri = process.env.ATLAS_URI;
+mongoose.connect(uri, { useNewUrlParser: true }).then(() => {
+  console.log('Connected to MongoDB');
+}).catch((err) => {
+  console.log('Error connecting to MongoDB:', err);
 });
+
+const connection = mongoose.connection;
+connection.once('open', () => {
+  console.log('MongoDB database connection established successfully');
+  const collection = connection.db.collection('articles');
+})
+
+const articleRouter = require('./routes/articles');
+
+app.use('/articles', articleRouter);
+
+app.listen(port, () => {
+  console.log(`Server is running on port: ${port}`);
+})

@@ -8,7 +8,7 @@ async function getArticles() {
     return await fetch(
       `http://localhost:5000/articles/${id}`)
       .then((response) => response.json())
-      .then((data) => data.items);
+      .then((data) => data);
   }
 
   export { getArticles, getArticleById };

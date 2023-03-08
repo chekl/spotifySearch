@@ -14,7 +14,7 @@ export const Header = () => {
         <Link to={'/about'}>
           <p>Про нас</p>
         </Link>
-        <Link to={'/artisles'}>
+        <Link to={'/articles'}>
           <p>Статті</p>
         </Link>
       </nav>

@@ -18,17 +18,18 @@ const Element = () => {
       element: <AboutPage />,
     },
     {
-      path: '/artisles',
+      path: '/articles',
       element: <ArticleListPage />,
+    }, 
+    {
+      path: '/articles/:id',
+      element: <ArticlePage />,
     },
     {
       path: ':id',
       element: <ArtistPage />,
     },
-    {
-      path: '/artisles/:id',
-      element: <ArticlePage />,
-    },
+   
   ]);
 
   return element;

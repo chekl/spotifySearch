@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, useRoutes } from 'react-router-dom';
 
 import App from '../../pages/HomePage/App';
-import ArtistPage from '../../pages/ArtistPage/ArtistPage';
-import AboutPage from '../../pages/AboutPage/AboutPage';
-import ArticleListPage from '../../pages/ArticleListPage/ArticleListPage';
-import ArticlePage from '../../pages/ArticlePage/ArticlePage';
+const ArtistPage = lazy(() => import('../../pages/ArtistPage/ArtistPage'));
+const ArticleListPage = lazy(() => import('../../pages/ArticleListPage/ArticleListPage'));
+const AboutPage = lazy(() => import('../../pages/AboutPage/AboutPage'));
+const ArticlePage = lazy(() => import('../../pages/ArticlePage/ArticlePage'));
 
 const Element = () => {
   let element = useRoutes([
@@ -20,7 +20,7 @@ const Element = () => {
     {
       path: '/articles',
       element: <ArticleListPage />,
-    }, 
+    },
     {
       path: '/articles/:id',
       element: <ArticlePage />,
@@ -29,7 +29,6 @@ const Element = () => {
       path: ':id',
       element: <ArtistPage />,
     },
-   
   ]);
 
   return element;
@@ -37,9 +36,11 @@ const Element = () => {
 
 const Wrapper = () => {
   return (
-    <Router>
-      <Element />
-    </Router>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Router>
+        <Element />
+      </Router>
+    </Suspense>
   );
 };
 

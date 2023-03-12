@@ -4,7 +4,7 @@ import BackLink from '../../components/BackLink/BackLink';
 import Layout from '../../components/Layout/Layout';
 import './AboutPage.css';
 
-const AboutPage = () => {
+export default function AboutPage() {
   return (
     <Layout>
       <Paper>
@@ -50,5 +50,3 @@ const AboutPage = () => {
     </Layout>
   );
 };
-
-export default AboutPage;

@@ -2,9 +2,9 @@ import React from 'react';
 import Logo from '../Logo/Logo';
 import './Footer.css';
 
-const Footer = () => {
+const Footer = (footerClass) => {
   return (
-    <footer>
+    <footer className={footerClass.className}>
       <Logo />
     </footer>
   );

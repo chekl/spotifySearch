@@ -1,7 +1,12 @@
 .info {
   color:aliceblue;
-  font-weight: 500;
-  width: 75%;
-  margin: 0 auto;
+  width: 85%;
+  margin: 2rem auto;
   line-height: 1.2rem;
+}
+
+@media (max-width: 650px) {
+  .info-container {
+    display: none;
+  }
 }

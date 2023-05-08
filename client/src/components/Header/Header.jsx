@@ -8,14 +8,14 @@ export const Header = () => {
     <header>
       <Logo />
       <nav>
-        <Link to={'/'}>
-          <p>Пошук виконавців</p>
+        <Link className='nav-link' to={'/'}>
+          Пошук виконавців
         </Link>
-        <Link to={'/about'}>
-          <p>Про нас</p>
+        <Link className='nav-link' to={'/about'}>
+          Про нас
         </Link>
-        <Link to={'/articles'}>
-          <p>Статті</p>
+        <Link className='nav-link' to={'/articles'}>
+          Статті
         </Link>
       </nav>
     </header>

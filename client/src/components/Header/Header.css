@@ -7,3 +7,22 @@
     height: 30px;
     width: auto;
 }
+
+.nav-link {
+    text-decoration: none;
+    color:aliceblue;
+    font-weight: 600;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 10%;
+    width: 50%;
+}
+
+header {
+    display: flex;
+    align-items: baseline;
+    margin: 10px 5%;
+}

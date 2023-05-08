@@ -12,7 +12,7 @@ export default function Search({ setArtist }) {
   localStorage.setItem('token', JSON.stringify(authParam));
 
   return (
-    <Paper elevation={3}>
+    <Paper className="search-container" elevation={3}>
       <IconButton
         type='button'
         aria-label='search'

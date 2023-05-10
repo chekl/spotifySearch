@@ -1,0 +1,7 @@
+.date-container {
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+    width: 110px;
+    margin: 0 0 0.5rem auto;
+}

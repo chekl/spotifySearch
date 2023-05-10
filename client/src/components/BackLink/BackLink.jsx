@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import "./BackLink.css"
 
 const BackLink = () => {
   return (
-    <Link to='..' relative='path'>
-      Back to Search
+    <div className='link-container'>
+      <Link to='..' relative='path' className='back-link'>
+      &larr; Back
     </Link>
+    </div>
   );
 };
 

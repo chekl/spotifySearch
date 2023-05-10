@@ -1,7 +1,8 @@
 .card {
     margin: 2rem auto;
     width: 100%;
-    height: 150px;
+    height: max-content;
+    width: 85%;
     font-family: "Montserrat";
     font-weight: 500;
 }
@@ -10,10 +11,11 @@
     display: flex;
     font-family: "Montserrat";
     font-weight: 500;
+    white-space: pre-wrap;
 }
 
 .cardImg {
-    height: 100%;
+    height: inherit;
     max-width: 150px;
 }
 

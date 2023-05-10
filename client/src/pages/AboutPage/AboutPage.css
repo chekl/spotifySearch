@@ -1,4 +1,15 @@
-.author {
-    height: 200px;
-    width: auto;
+.container-author {
+    display: flex;
+    margin: 1rem auto;
+    width: 85%;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
+.author {
+    width: 250px;
+    height: 285px;
+    margin: 0.5rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+

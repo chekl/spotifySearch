@@ -19,7 +19,7 @@ const ArticleListPage = () => {
   
   return (
     <Layout>
-      <Paper>
+      <Paper className='page-container'>
         <BackLink />
         <p>
           Ми пропонуємо не лише слухати українських виконавців, а ще й розширяти

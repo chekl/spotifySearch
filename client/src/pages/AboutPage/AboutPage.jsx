@@ -3,34 +3,37 @@ import { Paper } from '@mui/material';
 import BackLink from '../../components/BackLink/BackLink';
 import Layout from '../../components/Layout/Layout';
 import './AboutPage.css';
+import '../Page.css';
 
 export default function AboutPage() {
   return (
     <Layout>
-      <Paper>
+      <Paper elevation={3} className='page-container'>
         <BackLink />
         <p>
           Hark! це платформа, створена талановитим тріо Владиславою Чайкою,
           Анастасією Гойсак та Ростиславом Бибичем. Ми звичайні троє студентів з
           Харківського національного університету радіоелектроніки - мізки
           інноваційного сайту, який завойовує українську музичну індустрію.
-          <div>
+          </p>
+          <div className='container-author'>
             <img
-              className='author'
-              src='vladyslava.jpg'
-              alt='Картинка для Владислави Чайки'
+            className='author'
+              src='vladyslava.png'
+              alt='Картинка для Владислави' />
+            <img
+            className='author'
+              src='rostuslav.png'
+              alt='Картинка для Ростислава'
             />
             <img
-              className='author'
+            className='author'
               src='anastasia.png'
-              alt='Картинка для Анастасії Гойсак'
+              alt='Картинка для Анастасії'
             />
-            <img
-              className='author'
-              src='rostuslav.jpg'
-              alt='Картинка для Ростислава Бибича'
-            />
+            
           </div>
+          <p>
           <br />
           Мета Hark! проста, але благородна. Вона прагне просувати та
           популяризувати українських музичних виконавців. Сайт є мішаниною

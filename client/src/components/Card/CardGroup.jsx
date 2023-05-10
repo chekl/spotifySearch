@@ -19,6 +19,7 @@ export default function CardGroup({ group }) {
           />
           <CardContent>
             <h2>{group.name}</h2>
+            <br/>
             <p>
               Кількість підписників: {group.followers.total} <br />
               </p>

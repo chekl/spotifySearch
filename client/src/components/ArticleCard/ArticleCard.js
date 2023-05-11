@@ -24,9 +24,7 @@ const ArticleCard = ({article}) => {
           </h2>
           <div className='date-container'>
           <CalendarTodayIcon/>
-            <p>
-            {article.date}
-            </p>
+            <em>{article.date}</em>
           </div>
           <p>
             {article.description}

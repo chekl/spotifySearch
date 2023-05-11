@@ -21,3 +21,13 @@ header {
     align-items: baseline;
     margin: 10px 5%;
 }
+
+.nav-w-link {
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+}
+
+.nav-w-link img {
+    height: 16px;
+}

@@ -64,11 +64,8 @@ const ArtistPage = () => {
                         alt={album.name + ' фото гурту'}
                         className='album-img'
                       />
-                      <p>{album.name}</p>
-                      <p>
-                        <CalendarTodayIcon />
-                        {album.release_date}
-                      </p>
+                      <h3>{album.name}</h3>
+                      <p>Дата виходу: {album.release_date}</p>
                       <p>Загальна кількість треків: {album.total_tracks}</p>
                     </div>
                   ))}

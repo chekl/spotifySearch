@@ -1,7 +1,16 @@
 footer {
-    width: 100%;
-    height: 10vh;
-    background-color: transparent;
+    width: 95%;
+    height: fit-content;
+    margin: 0 2.5%;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93) 0px 2px 5px -1px, rgba(0, 0, 0) 0px 1px 3px -1px;
+    border-radius: 50px 50px 0 0;
+    padding: 20px 5%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
 }
 
 .absolute {
@@ -12,4 +21,21 @@ footer {
 .relative {
     position: relative;
     bottom: 0;
+}
+
+.footer-link {
+    color:black;
+    text-decoration: none;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.w-link {
+    margin: 1rem 10%;
+    display: flex;
+    justify-content: space-between;
+   width: 80%;
 }

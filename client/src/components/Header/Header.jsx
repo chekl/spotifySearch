@@ -17,7 +17,13 @@ export const Header = () => {
         <Link className='nav-link' to={'/articles'}>
           Статті
         </Link>
+
       </nav>
+              <div className='nav-w-link'>
+        <img  src='white-icon-linkedin.png' alt='linkedin'/>
+        <img src='white-icon-youtube.png' alt='youtube'/> 
+        <img src='white-icon-telegram.png' alt='telegram'/>
+        </div>
     </header>
   );
 };

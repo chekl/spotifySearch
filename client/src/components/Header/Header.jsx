@@ -19,10 +19,10 @@ export const Header = () => {
         </Link>
 
       </nav>
-              <div className='nav-w-link'>
-        <img  src='white-icon-linkedin.png' alt='linkedin'/>
-        <img src='white-icon-youtube.png' alt='youtube'/> 
-        <img src='white-icon-telegram.png' alt='telegram'/>
+        <div className='nav-w-link'>
+        <img  src='/white-icon-linkedin.png' alt='linkedin'/>
+        <img src='/white-icon-youtube.png' alt='youtube'/> 
+        <img src='/white-icon-telegram.png' alt='telegram'/>
         </div>
     </header>
   );

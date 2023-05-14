@@ -8,7 +8,7 @@ const Footer = (footerClass) => {
     <div className='footer-content'>
       <div>
     <Link to={'/'}>
-      <img src='logo-footer.png' alt='logo' height='30px'/>
+      <img src='/logo-footer.png' alt='logo' height='30px'/>
     </Link>
     
       <p>Hark &copy; 2023</p>      
@@ -30,9 +30,9 @@ const Footer = (footerClass) => {
       <div >
         <b>Ми у соціальних мережах:</b>
         <div className='w-link'>
-          <img src='linkedin-icon.png' alt='linkedin'/>
-        <img src='youtube-icon.png' alt='youtube'/> 
-          <img src='telegram-icon.png' alt='telegram'/>
+          <img src='/linkedin-icon.png' alt='linkedin'/>
+        <img src='/youtube-icon.png' alt='youtube'/> 
+          <img src='/telegram-icon.png' alt='telegram'/>
         </div>
       </div>      
     </div>

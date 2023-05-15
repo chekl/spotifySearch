@@ -9,7 +9,7 @@
     font-weight: 600;
 }
 
-nav {
+.nav {
     display: flex;
     justify-content: space-around;
     margin-left: 10%;
@@ -22,7 +22,7 @@ header {
     background-repeat:no-repeat;
     background-size: cover;
     position:sticky;
-    width: 100%;
+    width: 100vw;
     top: 0px;
     justify-content: center;
     align-items: center;
@@ -38,4 +38,31 @@ header {
 
 .nav-w-link img {
     height: 16px;
+}
+
+@media (max-width: 700px) {
+    header {
+        padding: 1rem 5%;
+        justify-content: space-between;
+    }
+
+    .nav {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .nav * {
+        margin: 0.5rem 0;
+    }
+
+    .nav-link {
+        color: rgba(0, 0, 0, 0.87);
+        font-weight: normal;
+        
+    }
+
+    .nav-w-link {
+        margin-top: 0.5rem;
+        justify-content: space-between;
+    }
 }

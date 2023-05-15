@@ -1,9 +1,11 @@
 .card-album {
     padding: 0 1rem 1rem 1rem;
+    height: max-content;
+    font-weight: 500;
 }
 
 .card-album img {
-    height: 100px;
+    height: 150px;
     width: 100%;
     object-fit: cover;
 }

@@ -25,3 +25,16 @@
     margin-left: 0.2rem;
     padding: 0.2rem;
 }
+
+
+@media (max-width: 500px) {
+    .cardContent {
+        flex-direction: column;
+    }
+
+    .cardImg {
+        max-width: 400px;
+        height: 150px;
+        object-fit: cover;
+    }
+}

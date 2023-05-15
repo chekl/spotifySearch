@@ -11,9 +11,8 @@ export default function CardGroup({ group }) {
     <Card className='card'>
       <CardActionArea component={Link} to={`/${group.id}`}>
         <Box className='cardContent'>
-          <CardMedia
-            component='img'
-            image={group.images.length > 0 ? group.images[0].url : 'noimage.png'}
+          <img
+            src={group.images.length > 0 ? group.images[0].url : 'noimage.png'}
             alt={group.name + ' фото гурту'}
             className='cardImg'
           />

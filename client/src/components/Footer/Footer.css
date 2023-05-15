@@ -37,5 +37,21 @@ footer {
     margin: 1rem 10%;
     display: flex;
     justify-content: space-between;
-   width: 80%;
+    width: 80%;
+}
+
+@media (max-width: 550px) {
+    .footer-content {
+        flex-direction: column;
+        margin: 0.5rem 1rem;
+    }
+
+    .footer-content div {
+        margin-top: 1rem;
+    }
+
+    .w-link {
+        width: 50%;
+        margin: 0.5rem 0;
+    }
 }

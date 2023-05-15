@@ -10,10 +10,13 @@ import '../Page.css';
 import './ArticlePage.css';
 import Loader from '../../components/Loader/Loader';
 import CardArticle from '../../components/Card/CardArticle';
+import ArrowCircleLeftOutlinedIcon from '@mui/icons-material/ArrowCircleLeftOutlined';
+import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
 
 const ArticlePage = () => {
   const [article, setArticle] = useState({});
   const [list, setList] = useState([]);
+  let [elId, setElId] = useState(0);
   let { id } = useParams();
   let text = '';
   let articleList = [];
@@ -39,10 +42,11 @@ const ArticlePage = () => {
 
   return (
     <Layout>
-     {Object.keys(article).length  > 0 && Object.keys(articleList).length > 0 ? (
-      <div className='article-page'>
-       <Paper className='page-container'>
-        <BackLink />
+      {Object.keys(article).length > 0 &&
+      Object.keys(articleList).length > 0 ? (
+        <div className='article-page'>
+          <Paper className='page-container'>
+            <BackLink />
             <h2>{article.title}</h2>
             <div className='date-container'>
               <CalendarTodayIcon />
@@ -64,20 +68,27 @@ const ArticlePage = () => {
                 );
               })}
             </div>
-      </Paper>
-        <Paper className="list-container">
-          <h3>Читайте також:</h3>
-          <div className='list'>
-            {articleList.map((article) => (
-              <CardArticle key={article._id} article={article}/>
-            ))}
-          </div>
-        </Paper> 
-      </div>
-      
+          </Paper>
+          <Paper className='list-container'>
+            <h3>Читайте також:</h3>
+            <div className='list'>
+            <button className='slider' onClick={() => {
+              elId < articleList.length - 1 ? setElId(--elId) : setElId(articleList.length - 1);
+              }}>
+              <ArrowCircleLeftOutlinedIcon/>
+            </button>
+                  <CardArticle key={article._id} article={articleList[elId]} />
+                <button className='slider' onClick={() => {
+                  elId < articleList.length - 1 ? setElId(++elId) : setElId(0)
+                  }}>
+              <ArrowCircleRightOutlinedIcon/>
+              </button>
+            </div>
+          </Paper>
+        </div>
       ) : (
-          <Loader />
-        )}
+        <Loader />
+      )}
     </Layout>
   );
 };

@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getArtistById, getArtistAlbums } from '../../API/spotifyServises';
-import SkeletonArtist from '../../components/SkeletonArtist/SkeletonArtist';
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import { Paper } from '@mui/material';
 import BackLink from '../../components/BackLink/BackLink';
 import Layout from '../../components/Layout/Layout';
 
 import '../Page.css';
 import './ArtistPage.css';
+import Loader from '../../components/Loader/Loader';
+import CardAlbum from '../../components/Card/CardAlbum';
 
 const ArtistPage = () => {
   let { id } = useParams();
@@ -54,20 +54,7 @@ const ArtistPage = () => {
               {albums.length > 0 ? (
                 <div className='album-container'>
                   {albums.map((album) => (
-                    <div key={album.id} className='album-card'>
-                      <img
-                        src={
-                          album.images.length > 0
-                            ? album.images[0].url
-                            : 'noimage.png'
-                        }
-                        alt={album.name + ' фото гурту'}
-                        className='album-img'
-                      />
-                      <h3>{album.name}</h3>
-                      <p>Дата виходу: {album.release_date}</p>
-                      <p>Загальна кількість треків: {album.total_tracks}</p>
-                    </div>
+                    <CardAlbum album={album}  key={album.id} />
                   ))}
                 </div>
               ) : (
@@ -75,7 +62,7 @@ const ArtistPage = () => {
               )}
           </>
         ) : (
-          <SkeletonArtist />
+          <Loader />
         )}
       </Paper>
     </Layout>

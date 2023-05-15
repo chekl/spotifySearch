@@ -1,5 +1,5 @@
-import { CardActionArea, Paper, Card } from '@mui/material';
-import React, {useContext} from 'react';
+import { Paper } from '@mui/material';
+import React from 'react';
 import Layout from '../../components/Layout/Layout';
 import { useEffect, useState } from 'react';
 import { getArticleById, getArticles } from '../../API/mongoDBServises';
@@ -8,7 +8,8 @@ import BackLink from '../../components/BackLink/BackLink';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import '../Page.css';
 import './ArticlePage.css';
-import { Link } from 'react-router-dom';
+import Loader from '../../components/Loader/Loader';
+import CardArticle from '../../components/Card/CardArticle';
 
 const ArticlePage = () => {
   const [article, setArticle] = useState({});
@@ -32,16 +33,16 @@ const ArticlePage = () => {
     text = article.text.toString().split('/n');
   }
 
-  if (list.length){
-    articleList = list.filter((el) => el._id !== id)
+  if (list.length) {
+    articleList = list.filter((el) => el._id !== id);
   }
 
   return (
     <Layout>
-      <Paper className='page-container'>
+     {Object.keys(article).length  > 0 && Object.keys(articleList).length > 0 ? (
+      <div className='article-page'>
+       <Paper className='page-container'>
         <BackLink />
-        {Object.keys(article).length > 0 && (
-          <>
             <h2>{article.title}</h2>
             <div className='date-container'>
               <CalendarTodayIcon />
@@ -49,7 +50,7 @@ const ArticlePage = () => {
             </div>
             <div>
               {text.map((text, index) => {
-                return index == 2 ? (
+                return index === 2 ? (
                   <div key={index}>
                     <img
                       src={article.img}
@@ -63,24 +64,20 @@ const ArticlePage = () => {
                 );
               })}
             </div>
-          </>
-        )}
       </Paper>
-      {articleList &&
-      <Paper>
-      <h2>Читайте також:</h2>
-       <div>
-        {articleList.map((el) => <Card key={el._id}>
-          <CardActionArea component={Link} to={`/articles/${el._id}`}>
-          <p>{el.title}</p>
-          <img src={el.img} alt={el.title} height='100px'/> 
-          </CardActionArea>        
-          </Card>
+        <Paper className="list-container">
+          <h3>Читайте також:</h3>
+          <div className='list'>
+            {articleList.map((article) => (
+              <CardArticle key={article._id} article={article}/>
+            ))}
+          </div>
+        </Paper> 
+      </div>
+      
+      ) : (
+          <Loader />
         )}
-       </div> 
-      </Paper>
-      }
-
     </Layout>
   );
 };

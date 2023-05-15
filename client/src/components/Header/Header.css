@@ -18,8 +18,16 @@ nav {
 
 header {
     display: flex;
-    align-items: baseline;
-    margin: 10px 5%;
+    background-image: url('../../../public/bg.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    position:sticky;
+    width: 100%;
+    top: 0px;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    z-index: 100;
 }
 
 .nav-w-link {

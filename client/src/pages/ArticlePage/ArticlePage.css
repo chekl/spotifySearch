@@ -6,3 +6,24 @@
     padding: 1rem;
     margin: 1rem 5%;
 }
+
+.article-page {
+    display: flex;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.list-container {
+    width: 300px;
+    height: fit-content;
+    margin: 2rem 1rem ;
+    padding: 1rem;
+}
+
+.list * {
+    margin-top: 1rem;
+}
+
+h3 {
+    font-size: 18px;
+}

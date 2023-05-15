@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Search from '../../components/Search/Search';
 import CardGroup from '../../components/Card/CardGroup';
 import Layout from '../../components/Layout/Layout';
+import Loader from '../../components/Loader/Loader';
 
 function App() {
   const [artist, setArtist] = useState([]);

@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, useRoutes } from 'react-router-dom';
 
 import App from '../../pages/HomePage/App';
+import Loader from '../Loader/Loader';
 const ArtistPage = lazy(() => import('../../pages/ArtistPage/ArtistPage'));
 const ArticleListPage = lazy(() => import('../../pages/ArticleListPage/ArticleListPage'));
 const AboutPage = lazy(() => import('../../pages/AboutPage/AboutPage'));
@@ -36,7 +37,7 @@ const Element = () => {
 
 const Wrapper = () => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Loader/>}>
       <Router>
         <Element />
       </Router>

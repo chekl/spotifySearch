@@ -15,6 +15,7 @@ const ArtistPage = () => {
   const authParam = JSON.parse(localStorage.getItem('token'));
   const [artist, setArtist] = useState({});
   const [albums, setAlbums] = useState({});
+  const [footer, setFooter] = useState('absolute');
 
   useEffect(() => {
     Promise.all([getArtistById(id, authParam), getArtistAlbums(id, authParam)])
@@ -23,10 +24,14 @@ const ArtistPage = () => {
         setAlbums(albumData);
       })
       .catch((error) => console.error(error));
-  }, []);
+  }, [authParam, id]);
+
+  useEffect(() => {
+    if(Object.keys(artist).length > 0) setFooter('relative')
+  }, [artist]);
 
   return (
-    <Layout>
+    <Layout footerClass={footer}>
       <Paper className='page-container'>
         <BackLink />
         {Object.keys(artist).length > 0 ? (

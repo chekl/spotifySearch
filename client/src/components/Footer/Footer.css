@@ -40,6 +40,15 @@ footer {
     width: 80%;
 }
 
+.email-link {
+    text-decoration: none;
+    color:black;
+}
+
+.w-link a:hover {
+    cursor: pointer;
+}
+
 @media (max-width: 550px) {
     .footer-content {
         flex-direction: column;

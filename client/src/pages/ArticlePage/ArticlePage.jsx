@@ -20,6 +20,20 @@ const ArticlePage = () => {
   let { id } = useParams();
   let text = '';
   let articleList = [];
+  const [footer, setFooter] = useState('absolute');
+
+  const [width, setWidth] = useState(window.innerWidth);
+
+  const setWindowDimensions = () => {
+    setWidth(window.innerWidth);
+  }
+ 
+      useEffect(() => {
+        window.addEventListener('resize', setWindowDimensions);
+        return () => {
+          window.removeEventListener('resize', setWindowDimensions)
+        }
+      }, [])
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -32,6 +46,10 @@ const ArticlePage = () => {
     fetchData();
   }, [id]);
 
+  useEffect(() => {
+    if (Object.keys(article).length > 0) setFooter('relative');
+  }, [article]);
+
   if (article.text) {
     text = article.text.toString().split('/n');
   }
@@ -41,7 +59,7 @@ const ArticlePage = () => {
   }
 
   return (
-    <Layout>
+    <Layout footerClass={footer}>
       {Object.keys(article).length > 0 &&
       Object.keys(articleList).length > 0 ? (
         <div className='article-page'>
@@ -68,22 +86,45 @@ const ArticlePage = () => {
                 );
               })}
             </div>
+            <br/>
           </Paper>
           <Paper className='list-container'>
             <h3>Читайте також:</h3>
             <div className='list'>
-            <button className='slider' onClick={() => {
-              elId < articleList.length - 1 ? setElId(--elId) : setElId(articleList.length - 1);
-              }}>
-              <ArrowCircleLeftOutlinedIcon/>
-            </button>
+              {width > 1000 ? (
+                <>
+                  {articleList.map((article) => {
+                    return <CardArticle key={article._id} article={article} />;
+                  })}
+                </>
+              ) : (
+                <>
+                  <button
+                    className='slider'
+                    onClick={() => {
+                      elId < articleList.length - 1
+                        ? setElId(--elId)
+                        : setElId(articleList.length - 1);
+                    }}
+                  >
+                    <ArrowCircleLeftOutlinedIcon />
+                  </button>
                   <CardArticle key={article._id} article={articleList[elId]} />
-                <button className='slider' onClick={() => {
-                  elId < articleList.length - 1 ? setElId(++elId) : setElId(0)
-                  }}>
-              <ArrowCircleRightOutlinedIcon/>
-              </button>
+                  <button
+                    className='slider'
+                    onClick={() => {
+                      elId < articleList.length - 1
+                        ? setElId(++elId)
+                        : setElId(0);
+                    }}
+                  >
+                    <ArrowCircleRightOutlinedIcon />
+                  </button>
+                </>
+              )
+              }
             </div>
+            
           </Paper>
         </div>
       ) : (

@@ -16,7 +16,7 @@
     width: 300px;
     height: fit-content;
     margin: 2rem 1rem ;
-    padding: 0.5rem;
+    padding: 1rem;
 }
 
 .list * {
@@ -33,18 +33,23 @@ h3 {
     margin: 0 1rem;
 }
 
+.slider:hover {
+    cursor: pointer;
+}
+
 @media (max-width: 1000px) {
     .article-page {
         display: block;
     }
     .list-container {
         width: 90%;
-        height: 350px;
+        height: 380px;
         margin: 1rem auto 2rem auto;
         padding: 1rem;
     }
     .list {
         display: flex;
+        height: 300px;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 1rem;

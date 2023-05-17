@@ -36,8 +36,12 @@ header {
     width: 100px;
 }
 
-.nav-w-link img {
+.nav-w-link a img {
     height: 16px;
+}
+
+.nav-w-link a:hover {
+    cursor: pointer;
 }
 
 @media (max-width: 700px) {

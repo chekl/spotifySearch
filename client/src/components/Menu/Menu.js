@@ -38,10 +38,16 @@ export default function BasicMenu() {
         <Divider sx={{margin: '0.5rem -1rem'}}/>
         <p>Ми в мережі</p>
         <div className='nav-w-link'>
-            <img src='/linkedin-icon.png' alt='linkedin' />
-            <img src='/youtube-icon.png' alt='youtube' />
-            <img src='/telegram-icon.png' alt='telegram' />
-        </div>
+            <a href='https://www.linkedin.com/in/harkboxUA/' target="_blank" rel="noreferrer">
+              <img src='/linkedin-icon.png' alt='linkedin' />
+            </a>
+            <a href='https://www.youtube.com/channel/UCq78UewtBliLnSJj3MSV2Vw' target="_blank" rel="noreferrer">
+              <img src='/youtube-icon.png' alt='youtube' />
+            </a>
+            <a href='https://t.me/harkboxUA' target="_blank" rel="noreferrer">
+              <img src='/telegram-icon.png' alt='telegram' />
+            </a>
+        </div> 
       </div>
      
       </Menu>

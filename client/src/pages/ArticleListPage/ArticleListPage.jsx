@@ -9,6 +9,7 @@ import Loader from '../../components/Loader/Loader';
 
 const ArticleListPage = () => {
   const [articles, setArticles] = useState([]);
+  const [footer, setFooter] = useState('absolute');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,10 +19,16 @@ const ArticleListPage = () => {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    if(Object.keys(articles).length > 0) setFooter('relative')
+  }, [articles]);
+
+
+
+
+
   return (
-    <Layout>
-      {Object.keys(articles).length > 0 ? (
-        <>
+    <Layout footerClass={footer}>
           <Paper className='page-container'>
             <BackLink />
             <p>
@@ -32,12 +39,17 @@ const ArticleListPage = () => {
               захопливі закутки пісенної творчості наших співвідчизників.
               Читайте та захоплюйтеся!
             </p>
-          </Paper>
+            <br/>
+          </Paper>      
+      {Object.keys(articles).length > 0 ? 
+      (
+        <>
           {articles.map((article) => {
             return <ArticleCard key={article._id} article={article} />;
           })}
         </>
       ) : (
+
         <Loader />
       )}
     </Layout>

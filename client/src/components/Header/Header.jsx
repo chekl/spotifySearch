@@ -27,9 +27,15 @@ export const Header = () => {
 
       </nav>
         <div className='nav-w-link'>
-        <img  src='/white-icon-linkedin.png' alt='linkedin'/>
-        <img src='/white-icon-youtube.png' alt='youtube'/> 
-        <img src='/white-icon-telegram.png' alt='telegram'/>
+            <a href='https://www.linkedin.com/in/harkboxUA/' target="_blank" rel="noreferrer">
+              <img src='/white-icon-linkedin.png' alt='linkedin' />
+            </a>
+            <a href='https://www.youtube.com/channel/UCq78UewtBliLnSJj3MSV2Vw' target="_blank" rel="noreferrer">
+              <img src='/white-icon-youtube.png' alt='youtube' />
+            </a>
+            <a href='https://t.me/harkboxUA' target="_blank" rel="noreferrer">
+              <img src='/white-icon-telegram.png' alt='telegram' />
+            </a>
         </div>
       </>
       : <BasicMenu/>

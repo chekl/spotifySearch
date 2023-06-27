@@ -4,10 +4,19 @@ import BackLink from '../../components/BackLink/BackLink';
 import Layout from '../../components/Layout/Layout';
 import './AboutPage.css'
 import '../Page.css';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 export default function AboutPage() {
   return (
-    <Layout>
+    <>
+        <Helmet>
+      <title>Про команду Hark!</title>
+      <meta name="description" content='Мета Hark! проста, але благородна. Вона прагне просувати та
+          популяризувати українських музичних виконавців. Сайт є мішаниною
+          всього: від традиційної української музики до сучасного попу та року.'/>
+    </Helmet>
+<Layout>
       <Paper elevation={3} className='page-container'>
         <BackLink />
         <p>
@@ -16,16 +25,11 @@ export default function AboutPage() {
           Харківського національного університету радіоелектроніки - мізки
           інноваційного сайту, який завойовує українську музичну індустрію.
           </p>
-          <img
-              src='hark.png'
-              alt='Картинка для команди'
-              className='hark-img'
-            />
           <p>
           Мета Hark! проста, але благородна. Вона прагне просувати та
           популяризувати українських музичних виконавців. Сайт є мішаниною
           всього: від традиційної української музики до сучасного попу та року.
-          З таким різноманіттям, є щось для кожного.
+          З таким різноманіттям, є щось для кожного. <Link className='about-link' to={'/'}>Пошук виконавців став легшим!</Link>
           </p>
           <p>
           Hark! повністю керується ентузіастами. Ми використовували свою
@@ -40,11 +44,12 @@ export default function AboutPage() {
         </p>            
         <img
             className='authors-img'
-              src='authors.png'
-              alt='Зображення команди'
+              src='/authors.webp'
+              alt='Команда Hark! Українські гурти'
               width='90%'
             />
       </Paper>
     </Layout>
+    </>
   );
 };

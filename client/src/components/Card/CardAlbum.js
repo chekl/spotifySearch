@@ -10,7 +10,7 @@ function CardAlbum({ album }) {
       />
       <h3>{album.name}</h3>
       <p>Дата виходу: {album.release_date}</p>
-      <p>Загальна кількість треків: {album.total_tracks}</p>
+      <p>Усього треків: {album.total_tracks}</p>
     </div>
   );
 }

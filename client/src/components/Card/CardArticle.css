@@ -1,10 +1,10 @@
-.card-album {
+.card-simple-article {
     padding: 0 1rem 1rem 1rem;
     height: max-content;
     font-weight: 500;
 }
 
-.card-album img {
+.card-simple-article img {
     height: 150px;
     width: 100%;
     object-fit: cover;

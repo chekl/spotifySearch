@@ -9,6 +9,7 @@ import '../Page.css';
 import './ArtistPage.css';
 import Loader from '../../components/Loader/Loader';
 import CardAlbum from '../../components/Card/CardAlbum';
+import { Helmet } from 'react-helmet';
 
 const ArtistPage = () => {
   let { id } = useParams();
@@ -27,11 +28,16 @@ const ArtistPage = () => {
   }, [authParam, id]);
 
   useEffect(() => {
-    if(Object.keys(artist).length > 0) setFooter('relative')
+    if (Object.keys(artist).length > 0) setFooter('relative');
   }, [artist]);
 
   return (
-    <Layout footerClass={footer}>
+    <>
+        <Helmet>
+          <title>{artist.name}</title>
+          <meta name='description' content={'Загальна інформація про ' + artist.name + ': кількість прослуховувань, альбоми та жанри пісень'}/>
+        </Helmet>
+        <Layout footerClass={footer}>
       <Paper className='page-container'>
         <BackLink />
         {Object.keys(artist).length > 0 ? (
@@ -54,23 +60,26 @@ const ArtistPage = () => {
                 </ul>
               </div>
             </div>
-<h4>Альбоми: {albums.length}</h4>
-              
-              {albums.length > 0 ? (
-                <div className='album-container'>
-                  {albums.map((album) => (
-                    <CardAlbum album={album}  key={album.id} />
-                  ))}
-                </div>
-              ) : (
-                <p>У цієї групи немає альбомів</p>
-              )}
+
+            <h4>Альбоми: {albums.length}</h4>
+            {albums.length > 0 ? (
+              <div className='album-container'>
+                {albums.map((album) => (
+                  <CardAlbum album={album} key={album.id} />
+                ))}
+              </div>
+            ) : (
+              <p style={{ paddingBottom: '1rem' }}>
+                У цієї групи немає альбомів
+              </p>
+            )}
           </>
         ) : (
           <Loader />
         )}
       </Paper>
-    </Layout>
+    </Layout>  
+    </>
   );
 };
 

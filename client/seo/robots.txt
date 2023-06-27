@@ -1,0 +1,7 @@
+User-agent: *
+
+Allow: / 
+
+Sitemap: https://hark.epizy.com/sitemap.xml
+
+Host: hark.epizy.com

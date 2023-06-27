@@ -9,3 +9,9 @@
     width: 90%;
     font-family: "Monserrat";
 }
+
+@media (min-width: 1000px) {
+    .search-container {
+        width: 60%;
+    }
+}

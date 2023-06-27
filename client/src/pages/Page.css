@@ -1,9 +1,9 @@
 .page-container {
     width: 90%;
-    margin: 2rem auto;
+    margin: 1rem auto 2rem auto;
 }
 
-.page-container p, h2, h4 {
+.page-container p, h1, h2, h4 {
     padding: 0 1.5rem;
     margin-bottom: 1rem;
 }
@@ -16,7 +16,6 @@
 .date-container {
     display: flex;
     justify-content: space-between;
-
     width: 120px;
     padding-right: 1rem;
     margin: 0 1rem 0.5rem auto;
@@ -26,8 +25,8 @@
     align-self: center;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
     .page-container {
-        width: 80%;
+        width: 60%;
     }
 }

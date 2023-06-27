@@ -9,6 +9,14 @@
     font-weight: 600;
 }
 
+.nav-link:hover {
+    background-color:rgba(137, 62, 212, 0.733);
+    height: 1.5rem;
+    padding: 2px 1rem;
+    transition: all 0.4s;
+}
+
+
 .nav {
     display: flex;
     justify-content: space-around;
@@ -18,7 +26,7 @@
 
 header {
     display: flex;
-    background-image: url('../../../public/bg.jpg');
+    background-image: url('../../../public/bg.webp');
     background-repeat:no-repeat;
     background-size: cover;
     position:sticky;
@@ -37,7 +45,7 @@ header {
 }
 
 .nav-w-link a img {
-    height: 16px;
+    height: 20px;
 }
 
 .nav-w-link a:hover {

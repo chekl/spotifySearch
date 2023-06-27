@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Logo = () => {
   return (
     <Link to={'/'}>
-      <img src='/logo.png' alt='Hark logo' height='30px'/>
+      <img src='/logo.webp' alt='Hark logo' height='30px'/>
     </Link>
   );
 };

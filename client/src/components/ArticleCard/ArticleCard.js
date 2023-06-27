@@ -16,7 +16,7 @@ const ArticleCard = ({article}) => {
           component="img"
           height="400"
           image={article.img || "noimage.png"}
-          alt="article alt"
+          alt={article.alt}
         /> 
         <CardContent>
           <h2>

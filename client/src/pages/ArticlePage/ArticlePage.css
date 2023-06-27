@@ -15,7 +15,7 @@
 .list-container {
     width: 300px;
     height: fit-content;
-    margin: 2rem 1rem ;
+    margin: 1rem 0.5rem ;
     padding: 1rem;
 }
 
@@ -23,8 +23,23 @@
     margin-top: 1rem;
 }
 
+.article-link {
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+  }
+  
+  .article-link:hover {
+    background-color: rgb(208, 177, 240);
+    color:aliceblue;
+  }
+
 h3 {
     font-size: 18px;
+}
+
+.article-page h1 {
+    font-size: 28px;
 }
 
 .slider {
@@ -37,14 +52,18 @@ h3 {
     cursor: pointer;
 }
 
+.date-container {
+    margin-right: 1rem;
+}
+
 @media (max-width: 1000px) {
     .article-page {
         display: block;
     }
     .list-container {
         width: 90%;
-        height: 380px;
-        margin: 1rem auto 2rem auto;
+        height: max-content;
+        margin: 0.5rem auto 2rem auto;
         padding: 1rem;
     }
     .list {
@@ -53,6 +72,10 @@ h3 {
         align-items: center;
         justify-content: space-between;
         margin-bottom: 1rem;
+    }
+
+    .list * {
+        margin-top: 0;
     }
 
     .page-container {

@@ -1,12 +1,30 @@
-.info {
+.info-container {
   color:aliceblue;
   width: 85%;
   margin: 2rem auto;
-  line-height: 1.2rem;
+  padding: 2rem;
+  line-height: 1.3rem;
 }
 
-@media (max-width: 650px) {
+.info-header {
+  font-size: 24px;
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+}
+
+.info-link {
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+}
+
+.info-link:hover {
+  background-color: rgb(208, 177, 240);
+  color:aliceblue;
+}
+
+@media (min-width: 1000px) {
   .info-container {
-    display: none;
+      width: 60%;
   }
 }

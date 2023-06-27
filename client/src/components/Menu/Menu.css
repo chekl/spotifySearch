@@ -2,6 +2,15 @@
     padding: 0 0 1rem 1rem;
 }
 
+.nav-link-basic {
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+}
+
+.nav-link-basic:hover {
+    background-color:rgba(137, 62, 212, 0.733);
+}
+
 @media (max-width: 700px) {
 .nav a{
     width: 150px;

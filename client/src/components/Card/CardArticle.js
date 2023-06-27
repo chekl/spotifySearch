@@ -7,9 +7,9 @@ function CardArticle({ article }) {
   
   
   return (
-    <Card className='card-album'>
+    <Card className='card-simple-article'>
       <CardActionArea component={Link} to={`/articles/${article._id}`}>
-        <img src={article.img} alt={article.title} />
+        <img src={article.img} alt={article.alt} />
         <p>{article.title}</p>
       </CardActionArea>
     </Card>

@@ -1,0 +1,20 @@
+.non {
+    display: flex;
+    align-items: center;
+    height: 200px;
+    width: max-content;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.non p {
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 1rem;
+    width: 200px;
+}
+
+.non p span {
+    display: hidden;
+}

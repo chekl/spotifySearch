@@ -1,15 +1,19 @@
 import React from 'react';
 import Footer from '../Footer/Footer';
 import { Header } from '../Header/Header';
+import "./Layout.css"
 
-const Layout = ({ footerClass, children }) => {
+const Layout = ({ children }) => {
   return (
-    <div className='main'>
+    <div className='layout'>
       <Header />
-      <div className='content'>
-        {children}
-      </div>
-      <Footer className={footerClass}/>
+      <main className='content-size'>
+      <div></div>
+      <div>{children}</div>
+      <div></div>
+      </main>
+        
+      <Footer/>
     </div>
   );
 };

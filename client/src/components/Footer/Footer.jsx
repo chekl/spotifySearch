@@ -4,15 +4,14 @@ import './Footer.css';
 
 const Footer = (footerClass) => {
  const nofollow = useRef('nofollow')
-  return (
-    <footer className={footerClass.className}>
+ 
+ return (
+    <footer>
       <div className='footer-content'>
         <div>
           <Link to={'/'}>
             <img src='/logo-footer.webp' alt='Hark! Пошук української музики' height='30px' />
           </Link>
-
-          <p>Hark &copy; 2023</p>
         </div>
 
         <div className='footer-nav'>
@@ -51,15 +50,6 @@ const Footer = (footerClass) => {
               <img src='/telegram-icon.webp' alt='Telegram Hark! українська музика' />
             </a>
           </div>
-          <a
-            className='email-link'
-            href='mailto:harkbox.ua@gmail.com'
-            target='_blank'
-            rel='noreferrer'
-            ref={nofollow}
-          >
-            harkbox.ua@gmail.com
-          </a>
         </div>
       </div>
     </footer>

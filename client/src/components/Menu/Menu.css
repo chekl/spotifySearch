@@ -1,5 +1,7 @@
 .nav-container{
+    width: 170px;
     padding: 0 0 1rem 1rem;
+    font-family: "Montserrat";
 }
 
 .nav-link-basic {
@@ -8,17 +10,5 @@
 }
 
 .nav-link-basic:hover {
-    background-color:rgba(137, 62, 212, 0.733);
-}
-
-@media (max-width: 700px) {
-.nav a{
-    width: 150px;
-    padding: 1px;
-}
-
-.nav a:hover{
-    background-color:rgba(133, 51, 234, 0.427);
-    color: white;
-}
+    text-decoration: wavy underline;
 }

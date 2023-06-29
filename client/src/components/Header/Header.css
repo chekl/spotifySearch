@@ -9,11 +9,8 @@
     font-weight: 600;
 }
 
-.nav-link:hover {
-    background-color:rgba(137, 62, 212, 0.733);
-    height: 1.5rem;
-    padding: 2px 1rem;
-    transition: all 0.4s;
+.nav-link:hover{
+    text-decoration: wavy underline;
 }
 
 
@@ -26,9 +23,7 @@
 
 header {
     display: flex;
-    background-image: url('../../../public/bg.webp');
-    background-repeat:no-repeat;
-    background-size: cover;
+    background-color:#5220a9;
     position:sticky;
     width: 100vw;
     top: 0px;
@@ -36,6 +31,7 @@ header {
     align-items: center;
     padding: 1rem;
     z-index: 100;
+
 }
 
 .nav-w-link {

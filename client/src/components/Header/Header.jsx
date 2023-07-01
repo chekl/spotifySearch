@@ -1,14 +1,14 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
+import useWindowWidth from '../../hooks/useWindowWidth';
 import { Link } from 'react-router-dom';
 import Logo from '../Logo/Logo';
 import './Header.css';
 import BasicMenu from '../Menu/Menu';
+import navigation from '../../helpers/navigation';
 
 export const Header = () => {
-  const [width, setWidth] = useState(window.innerWidth);
   const nofollow = useRef('nofollow');
-
-  window.onresize = () => {setWidth(window.innerWidth)}
+  const width = useWindowWidth();
 
   return (
     <header>
@@ -16,13 +16,13 @@ export const Header = () => {
       { width > 700 ?
       <>
         <nav className='nav'>
-        <Link className='nav-link' to={'/'} onClick={() => window.scrollTo(0,0)}>
+        <Link className='nav-link' to={'/'} onClick={navigation()}>
           Пошук виконавців
         </Link>
-        <Link className='nav-link' to={'/about'} onClick={() => window.scrollTo(0,0)}>
+        <Link className='nav-link' to={'/about'} onClick={navigation()}>
           Про нас
         </Link>
-        <Link className='nav-link' to={'/articles'} onClick={() => window.scrollTo(0,0)}>
+        <Link className='nav-link' to={'/articles'} onClick={navigation()}>
           Статті
         </Link>
 

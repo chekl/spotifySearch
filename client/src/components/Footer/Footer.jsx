@@ -1,8 +1,9 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
+import navigation from '../../helpers/navigation';
 
-const Footer = (footerClass) => {
+const Footer = () => {
  const nofollow = useRef('nofollow')
  
  return (
@@ -16,13 +17,13 @@ const Footer = (footerClass) => {
 
         <div className='footer-nav'>
           <b>Внутрішні посилання:</b>
-          <Link to={'/'} className='footer-link' onClick={() => window.scrollTo(0,0)}>
+          <Link to={'/'} className='footer-link' onClick={navigation()}>
             Пошук виконавців
           </Link>
-          <Link to={'/about'} className='footer-link' onClick={() => window.scrollTo(0,0)}>
+          <Link to={'/about'} className='footer-link' onClick={navigation()}>
             Про нас
           </Link>
-          <Link to={'/articles'} className='footer-link' onClick={() => window.scrollTo(0,0)}>
+          <Link to={'/articles'} className='footer-link' onClick={navigation()}>
             Статті
           </Link>
         </div>

@@ -6,7 +6,7 @@ const BackLink = () => {
   return (
     <div className='link-container'>
       <Link to='..' relative='path' className='back-link'>
-      &larr; Back
+      &larr; Назад
     </Link>
     </div>
   );

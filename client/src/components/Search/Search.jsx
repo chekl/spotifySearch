@@ -14,16 +14,16 @@ export default function Search({ setArtist }) {
   localStorage.setItem('token', JSON.stringify(authParam));
 
    useEffect(() => {
-    getArtistsByGenre(setArtist, searchInput, authParam)
-  },[])
+    getArtistsByGenre(setArtist, searchInput, authParam);
+    localStorage.setItem('search', searchInput);
+  })
   
   return (
     <Paper className="search-container" elevation={3}>
       <IconButton
         type='button'
         aria-label='search'
-        onClick={() => {getArtistsByGenre(setArtist, searchInput, authParam);     localStorage.setItem('search', searchInput);}}
-      >
+              >
         <SearchIcon />
       </IconButton>
       <InputBase
@@ -32,12 +32,6 @@ export default function Search({ setArtist }) {
         placeholder='Введіть назву гурту'
         value={searchInput}
         onChange={(event) => setSearchInput(event.target.value)}
-        onKeyPress={(event) => {
-          if (event.key === 'Enter') {
-            getArtistsByGenre(setArtist, searchInput, authParam);
-            localStorage.setItem('search', searchInput);
-          }
-        }}
       />
     </Paper>
   );

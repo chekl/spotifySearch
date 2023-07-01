@@ -16,17 +16,21 @@ export default function CardGroup({ group }) {
             className='cardImg'
           />
           <CardContent>
-            <h2>{group.name}</h2>
-            <br/>
-            <p>
-              Кількість підписників: {group.followers.total} <br />
-              </p>
-              <p>Жанр виконання: {group.genres.length !== 0 ? group.genres.map((genre, index) => {
-                if(index < 9) {
-                  return <span key={genre} className='genreSpan'>{genre}</span>
-                }
-              }) : <span className='genreSpan'>відсутній</span>
-              }
+            <h2 className='groupName'>{group.name}</h2>
+            <p>Кількість підписників: {group.followers.total}</p>
+            <p>Жанр виконання:  
+            {group.genres.length ? (
+              group.genres.map(
+                (genre, index) =>
+                  index < 3 && (
+                    <span key={index} className='genreSpan'>
+                      {genre}
+                    </span>
+                  )
+              )
+            ) : (
+              <span className='genreSpan'>відсутній</span>
+            )}
             </p>
           </CardContent>
         </Box>

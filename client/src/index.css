@@ -13,6 +13,10 @@
   background-color:#5220a9;
 }
 
+h1, h2, h3, h4 {
+  line-height: 2rem;
+}
+
 h1 {
   font-size: 24px;
   margin-bottom: 1rem;

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BackLink from '../../components/BackLink/BackLink';
-import Layout from '../../components/Layout/Layout';
 import { Helmet } from 'react-helmet';
 import './AboutPage.css';
 import '../Page.css';

@@ -1,11 +1,23 @@
 .card-simple-article {
-    padding: 0 1rem 1rem 1rem;
-    height: max-content;
+    height: 300px;
+    width: 100%;
     font-weight: 500;
+    margin-top: 1.5rem;   
 }
 
 .card-simple-article img {
-    height: 150px;
+    height: 160px;
     width: 100%;
     object-fit: cover;
+}
+
+.card-simple-article p {
+    font-weight: 600;
+    padding: 1rem;
+}
+
+@media (min-width: 1000px) {  
+    .card-simple-article {
+        height: 250px;
+    }
 }

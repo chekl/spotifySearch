@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getArtistById, getArtistAlbums } from '../../API/spotifyServises';
 import BackLink from '../../components/BackLink/BackLink';
-import Layout from '../../components/Layout/Layout';
 import '../Page.css';
 import './ArtistPage.css';
 import CardAlbum from '../../components/Card/CardAlbum';

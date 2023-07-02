@@ -1,0 +1,38 @@
+.list-container {
+    width: 40%;
+    margin-left: 1rem;
+}
+
+.list-container h2 {
+    font-size: 18px;
+    color: white;
+}
+
+.slider {
+    border: transparent;
+    background: transparent;
+    margin: 0 1rem;
+    font-size: 50px;
+    color: white;
+}
+
+.slider:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {    
+    .list-container {
+        height: 350px;
+        margin: 0rem auto;
+        padding-top: 1rem;
+        width: 100%;
+    }
+
+    .list {
+        display: flex;
+        height: 300px;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+}

@@ -2,7 +2,6 @@ import './App.css';
 import { useState, useMemo } from 'react';
 import Search from '../../components/Search/Search';
 import CardGroup from '../../components/Card/CardGroup';
-import Layout from '../../components/Layout/Layout';
 import { Helmet } from 'react-helmet';
 import NonArtist from '../../components/NonArtist/NonArtist';
 

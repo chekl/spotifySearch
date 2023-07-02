@@ -10,14 +10,8 @@
     display: flex;
 }
 
-.list-container {
-    width: 300px;
-    height: fit-content;
-    margin-left: 1rem;
-}
-
-.list * {
-    margin-top: 1rem;
+.article-container {
+    width: 90%
 }
 
 .article-link {
@@ -31,23 +25,8 @@
     color:aliceblue;
   }
 
-h2 {
-    font-size: 18px;
-    color: white;
-}
-
 .article-page h1 {
     font-size: 28px;
-}
-
-.slider {
-    border: transparent;
-    background: transparent;
-    margin: 0 1rem;
-}
-
-.slider:hover {
-    cursor: pointer;
 }
 
 .date-container {
@@ -60,26 +39,8 @@ h2 {
         width: 100%;
         margin: 0;
     }
-    
-    .list-container {
-        width: 90%;
-        height: max-content;
-        margin: 0rem auto;
-        padding: 1rem;
-    }
-    .list {
-        display: flex;
-        height: 300px;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 1rem;
-    }
 
-    .list * {
-        margin-top: 0;
-    }
-
-    .page-container {
-        width: 90%;
+    .article-container {
+        width: 100%;
     }
 }

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import CardArticle from '../../components/Card/CardArticle';
 import { articles } from '../../articles/articles';
 import useWindowWidth from '../../hooks/useWindowWidth';
+import "./ArticleRecomendation.css"
 
 export default function ArticleRecomends({ id }) {
   const articleList = articles.filter((el) => el._id !== id);

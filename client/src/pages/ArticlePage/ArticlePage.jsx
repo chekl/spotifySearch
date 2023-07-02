@@ -1,5 +1,4 @@
 import React from 'react';
-import Layout from '../../components/Layout/Layout';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import BackLink from '../../components/BackLink/BackLink';
@@ -28,7 +27,7 @@ const ArticlePage = () => {
       </Helmet>
       
         <div className='article-page'>
-          <div className='page-container'>
+          <div className='page-container article-container'>
             <BackLink />
             <h1>{article[0].title}</h1>
             <div className='date-container'>

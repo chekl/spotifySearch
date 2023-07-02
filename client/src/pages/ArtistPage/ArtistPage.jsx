@@ -9,7 +9,7 @@ import CardAlbum from '../../components/Card/CardAlbum';
 import { Helmet } from 'react-helmet';
 
 const ArtistPage = () => {
-  let { id } = useParams();
+  const { id } = useParams();
   const authParam = JSON.parse(localStorage.getItem('token'));
   const [artist, setArtist] = useState({});
   const [albums, setAlbums] = useState({});
@@ -21,11 +21,11 @@ const ArtistPage = () => {
         setAlbums(albumData);
       })
       .catch((error) => console.error(error));
-  }, [authParam, id]);
+  }, []);
 
-  return (
+  return Object.keys(artist).length && (
     <>
-      <Helmet>
+           <Helmet>
         <title>{artist.name}</title>
         <meta
           name='description'
@@ -35,10 +35,10 @@ const ArtistPage = () => {
             ': кількість прослуховувань, альбоми та жанри пісень'
           }
         />
-      </Helmet>
+      </Helmet> 
 
-      <Layout>
-        <div className='page-container'>
+
+ <div className='page-container'>
           <BackLink />
               <div className='artist-info-container'>
                 <img
@@ -72,7 +72,6 @@ const ArtistPage = () => {
                 </p>
               )}
         </div>
-      </Layout>
     </>
   );
 };

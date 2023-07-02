@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import './CardArticle.css';
 
 function CardArticle({ article }) {
-  
-  
   return (
     <Card className='card-simple-article'>
       <CardActionArea component={Link} to={`/articles/${article._id}`}>

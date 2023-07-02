@@ -1,20 +1,15 @@
-.containerLogo {
-    margin: 2rem;
-    margin-left: 0;
-}
-
-.nav-link {
+.link {
     text-decoration: none;
     color:aliceblue;
     font-weight: 600;
 }
 
-.nav-link:hover{
+.link:hover{
     text-decoration: wavy underline;
 }
 
 
-.nav {
+nav {
     display: flex;
     justify-content: space-around;
     margin-left: 10%;
@@ -34,18 +29,10 @@ header {
 
 }
 
-.nav-w-link {
+.network {
     display: flex;
     justify-content: space-around;
     width: 100px;
-}
-
-.nav-w-link a img {
-    height: 20px;
-}
-
-.nav-w-link a:hover {
-    cursor: pointer;
 }
 
 @media (max-width: 700px) {
@@ -54,22 +41,22 @@ header {
         justify-content: space-between;
     }
 
-    .nav {
+    nav {
         flex-direction: column;
         margin-left: 0;
     }
 
-    .nav * {
+    nav * {
         margin: 0.5rem 0;
     }
 
-    .nav-link {
+    .link {
         color: rgba(0, 0, 0, 0.87);
         font-weight: normal;
         
     }
 
-    .nav-w-link {
+    .network {
         margin-top: 0.5rem;
         justify-content: space-between;
     }

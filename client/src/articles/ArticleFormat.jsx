@@ -14,7 +14,6 @@ export default function ArticleFormat({article}) {
               let link = paragraph.split("/");
 
               return index === 2 ?
-                <>
                 <div key={index}>
                   <img
                     src={article[0].img}
@@ -39,9 +38,8 @@ export default function ArticleFormat({article}) {
                   }
 
                 </div>              
-                </>
 
-               : <>
+               : <div key={index}>
                {header &&
                   <h2>{article[0].headers[headnum++]}</h2>
                   }    
@@ -57,7 +55,7 @@ export default function ArticleFormat({article}) {
                   {link.length === 1 &&
                   <p>{paragraph}</p>
                   }
-               </>;
+               </div>;
             })
             
             }

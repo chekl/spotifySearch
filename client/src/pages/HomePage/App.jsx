@@ -28,7 +28,6 @@ function App() {
           content='Пошук українських виконавців та захопливі статті про музику: усе це в одному флаконі! Команда Hark! допоможе знайти щось для душі!'
         />
       </Helmet>
-      <Layout>
         <div className='motto'>
           <p>Шукай</p>
           <p>Слухай</p>
@@ -36,7 +35,6 @@ function App() {
         </div>
         <Search setArtist={setArtist} />
         {artistsList}
-      </Layout>
     </>
   );
 }

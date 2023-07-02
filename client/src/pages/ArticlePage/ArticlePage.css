@@ -8,15 +8,12 @@
 
 .article-page {
     display: flex;
-    width: 90%;
-    margin-left: 5%;
 }
 
 .list-container {
     width: 300px;
     height: fit-content;
-    margin: 1rem 0.5rem ;
-    padding: 1rem;
+    margin-left: 1rem;
 }
 
 .list * {
@@ -34,8 +31,9 @@
     color:aliceblue;
   }
 
-h3 {
+h2 {
     font-size: 18px;
+    color: white;
 }
 
 .article-page h1 {
@@ -59,11 +57,14 @@ h3 {
 @media (max-width: 1000px) {
     .article-page {
         display: block;
+        width: 100%;
+        margin: 0;
     }
+    
     .list-container {
         width: 90%;
         height: max-content;
-        margin: 0.5rem auto 2rem auto;
+        margin: 0rem auto;
         padding: 1rem;
     }
     .list {

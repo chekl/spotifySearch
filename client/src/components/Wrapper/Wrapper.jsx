@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, useRoutes } from 'react-router-dom';
 
+import Layout from '../Layout/Layout';
 import App from '../../pages/HomePage/App';
 import Loader from '../Loader/Loader';
 const ArtistPage = lazy(() => import('../../pages/ArtistPage/ArtistPage'));
@@ -39,7 +40,9 @@ const Wrapper = () => {
   return (
     <Suspense fallback={<Loader/>}>
       <Router>
-        <Element />
+        <Layout>
+          <Element />
+        </Layout>
       </Router>
     </Suspense>
   );

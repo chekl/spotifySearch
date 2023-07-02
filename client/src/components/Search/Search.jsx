@@ -16,7 +16,7 @@ export default function Search({ setArtist }) {
    useEffect(() => {
     getArtistsByGenre(setArtist, searchInput, authParam);
     localStorage.setItem('search', searchInput);
-  })
+  }, [searchInput])
   
   return (
     <Paper className="search-container" elevation={3}>

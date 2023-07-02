@@ -10,7 +10,7 @@ export default function ArticleRecomends({ id }) {
 
   return (
     <div className='list-container'>
-      <h3>Читайте також:</h3>
+      <h2>Читайте також:</h2>
       <div className='list'>
         {width > 1000 ? (
           <>

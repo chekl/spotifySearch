@@ -3,15 +3,8 @@
     text-decoration: none;
     font-weight: 600;
     width: 100px;
-    
 }
 
-.link-container {
-    margin: 1rem;
-    padding-top: 1rem;
-}
-
-.back-link:hover {
-    padding-left: 1rem;
-    transition: all 0.4s ease-out;
+ .link-container {
+    padding-bottom: 1rem;
 }

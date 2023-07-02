@@ -19,7 +19,6 @@ export default function AboutPage() {
         />
       </Helmet>
 
-      <Layout>
         <div className='page-container'>
           <BackLink />
           <p>
@@ -53,7 +52,6 @@ export default function AboutPage() {
             alt='Команда Hark! Українські гурти'
           />
         </div>
-      </Layout>
     </>
   );
 }

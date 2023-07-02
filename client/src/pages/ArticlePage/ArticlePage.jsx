@@ -26,8 +26,7 @@ const ArticlePage = () => {
         <title>{article[0].title}</title>
         <meta name='description' content={article[0].description} />
       </Helmet>
-
-      <Layout>
+      
         <div className='article-page'>
           <div className='page-container'>
             <BackLink />
@@ -40,7 +39,6 @@ const ArticlePage = () => {
           </div>
           <ArticleRecomends id={id} />
         </div>
-      </Layout>
     </>
   );
 };

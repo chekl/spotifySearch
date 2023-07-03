@@ -8,7 +8,6 @@ import styles from './Header.module.css';
 
 export const Header = () => {
   const width = useWindowWidth();
-
   return (
     <header>
       <Logo />

@@ -18,8 +18,8 @@ nav {
 
 header {
     display: flex;
-    background-color:#5220a9;
-    position:sticky;
+background: rgb(82,32,169);   
+position:sticky;
     width: 100vw;
     top: 0px;
     justify-content: center;

@@ -7,9 +7,16 @@
 }
 
 .content-size {
-    display: grid;
     width: 100vw;
     min-height: 70vh;
-    grid-template-columns: 10% auto 10%;
+    padding-left: 10%;
+    padding-right: 10%;
     margin: 1rem auto;
+}
+
+@media (min-width: 1000px) {    
+    .content-size {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
 }

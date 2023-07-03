@@ -10,10 +10,10 @@
   width: 100vw;
   min-height: 100vh;
   font-family: "Montserrat";
-  background-color:#5220a9;
-}
+ background: rgb(82,32,169);
+ background: linear-gradient(186deg, rgba(82,32,169,1) 15%, rgba(111,51,164,1) 100%);}
 
-h1, h2, h3, h4 {
+ h1, h2, h3, h4 {
   line-height: 2rem;
 }
 

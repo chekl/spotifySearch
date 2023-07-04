@@ -19,7 +19,7 @@ export default function Search({ setArtist }) {
   }, [searchInput])
   
   return (
-    <Paper className="search-container" elevation={3}>
+    <div className="search-container" elevation={3}>
       <IconButton
         type='button'
         aria-label='search'
@@ -33,6 +33,6 @@ export default function Search({ setArtist }) {
         value={searchInput}
         onChange={(event) => setSearchInput(event.target.value)}
       />
-    </Paper>
+    </div>
   );
 }

@@ -35,19 +35,6 @@ export default function BasicMenu() {
           Статті
         </Link>
       </nav>
-        <Divider sx={{margin: '0.5rem -1rem'}}/>
-        <p>Ми в мережі</p>
-        <div className='nav-w-link'>
-            <a href='https://www.linkedin.com/in/harkboxUA/' target="_blank" rel="noreferrer" ref={nofollow}>
-              <img src='/linkedin-icon.webp' alt='Linkedin Hark! українська музика' />
-            </a>
-            <a href='https://www.youtube.com/channel/UCq78UewtBliLnSJj3MSV2Vw' target="_blank" rel="noreferrer" ref={nofollow}>
-              <img src='/youtube-icon.webp' alt='Youtube Hark! українська музика' />
-            </a>
-            <a href='https://t.me/harkboxUA' target="_blank" rel="noreferrer" ref={nofollow}>
-              <img src='/telegram-icon.webp' alt='Telegram Hark! українська музика' />
-            </a>
-        </div> 
       </div>
      
       </Menu>

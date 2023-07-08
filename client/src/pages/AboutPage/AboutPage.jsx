@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import BackLink from '../../components/BackLink/BackLink';
+import PageContainer from '../../blocks/PageContainer';
 import { Helmet } from 'react-helmet';
 import './AboutPage.css';
 import '../Page.css';
@@ -18,8 +18,7 @@ export default function AboutPage() {
         />
       </Helmet>
 
-        <div className='page-container'>
-          <BackLink />
+        <PageContainer>
           <p>
             Сьогодні питання вітчизняного контенту стало дуже гостро у нашому
             суспільстві. Люди відчайдушно шукають музичні гурти та виконавців,
@@ -50,7 +49,7 @@ export default function AboutPage() {
             src='/authors.webp'
             alt='Команда Hark! Українські гурти'
           />
-        </div>
+        </PageContainer>
     </>
   );
 }

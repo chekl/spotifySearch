@@ -9,6 +9,8 @@ import { articles } from '../../articles/articles';
 import { Helmet } from 'react-helmet';
 import ArticleFormat from '../../articles/ArticleFormat';
 import ArticleRecomends from '../../components/ArticleRecomends/ArticleRecomends';
+import Page404 from '../Page404/Page404';
+import navigation from '../../helpers/navigation';
 
 const ArticlePage = () => {
   let { id } = useParams();
@@ -16,9 +18,13 @@ const ArticlePage = () => {
   const article = articles.filter((el) => el._id === id);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    navigation()
   }, [id]);
 
+  if(!article.length) {
+    return <Page404/>;
+  }
+  
   return (
     <>
       <Helmet>

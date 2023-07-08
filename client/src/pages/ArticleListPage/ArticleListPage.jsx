@@ -1,8 +1,8 @@
 import React from 'react';
-import BackLink from '../../components/BackLink/BackLink';
 import ArticleCard from '../../components/ArticleCard/ArticleCard';
 import { articles } from '../../articles/articles';
 import { Helmet } from 'react-helmet';
+import PageContainer from '../../blocks/PageContainer';
 
 const ArticleListPage = () => {
   return (
@@ -15,15 +15,14 @@ const ArticleListPage = () => {
         />
       </Helmet>
 
-      <div className='page-container'>
-        <BackLink />
+      <PageContainer>
         <p>
           Ми пропонуємо не лише слухати українських виконавців, а ще й розширяти
           власні знання про них! Тут Ви зможете знайти цікаві статті про музику, її розвиток та
           захопливі закутки пісенної творчості наших співвітчизників. Читайте та
           захоплюйтеся!
         </p>
-      </div>
+      </PageContainer>
       {articles.map((article) => {
         return <ArticleCard key={article._id} article={article} />;
       })}

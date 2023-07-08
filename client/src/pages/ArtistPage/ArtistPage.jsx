@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getArtistById, getArtistAlbums } from '../../API/spotifyServises';
-import BackLink from '../../components/BackLink/BackLink';
+import PageContainer from '../../blocks/PageContainer';
 import '../Page.css';
 import './ArtistPage.css';
 import CardAlbum from '../../components/Card/CardAlbum';
 import { Helmet } from 'react-helmet';
+import Page404 from "../Page404/Page404"
 
 const ArtistPage = () => {
   const { id } = useParams();
@@ -19,8 +20,11 @@ const ArtistPage = () => {
         setArtist(artistData);
         setAlbums(albumData);
       })
-      .catch((error) => console.error(error));
   }, []);
+
+  if(artist.error) {
+    return <Page404/>;
+  }
 
   return Object.keys(artist).length && (
     <>
@@ -37,8 +41,9 @@ const ArtistPage = () => {
       </Helmet> 
 
 
- <div className='page-container'>
-          <BackLink />
+<PageContainer>
+
+
               <div className='artist-info-container'>
                 <img
                   alt={artist.name + ' фото гурту'}
@@ -70,7 +75,7 @@ const ArtistPage = () => {
                   У цієї групи немає альбомів
                 </p>
               )}
-        </div>
+</PageContainer>
     </>
   );
 };

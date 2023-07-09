@@ -1,37 +1,33 @@
 import React from 'react'
-import {Card} from '@mui/material'
-import {CardActionArea, CardMedia, CardContent} from '@mui/material'
-import { Link } from 'react-router-dom'
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import { useNavigate } from 'react-router-dom'
+import {BiCalendarAlt} from "react-icons/bi"
 import '../../pages/Page.css';
 import './ArticleCard.css'
 
 
 const ArticleCard = ({article}) => {
+  const navigation = useNavigate();
   return (
-    <Card className='page-container'>
-             <CardActionArea component={Link} to={`/articles/${article._id}`}>
-         
-         <CardMedia
-          component="img"
-          height="400"
-          image={article.img}
+    <div className='page-container' onClick={() => navigation(`/articles/${article._id}`)}>
+         <img
+         className='article-card-img'
+          height="400px"
+          src={article.img}
           alt={article.alt}
         /> 
-        <CardContent>
+        <div>
           <h2>
             {article.title}
           </h2>
           <div className='date-container'>
-          <CalendarTodayIcon/>
+          <BiCalendarAlt/>
             <em>{article.date}</em>
           </div>
           <p>
             {article.description}
           </p>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+        </div>
+    </div>
   )
 }
 

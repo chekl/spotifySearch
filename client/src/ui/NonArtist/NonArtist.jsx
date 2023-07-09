@@ -5,7 +5,7 @@ export default function NonArtist() {
   return (
     <div className='non'>
       <img
-        src='/non-found.webp'
+        src='/images/non-found.webp'
         alt='Такого виконавця немає Hark!'
         height='100px'
       />

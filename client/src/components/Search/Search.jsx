@@ -1,11 +1,10 @@
 import * as React from 'react';
-import { Paper, InputBase, IconButton } from '@mui/material';
-import SearchIcon from '@mui/icons-material/Search';
 import { useState } from 'react';
 import { getArtistsByGenre } from '../../API/spotifyServises';
 import './Search.css';
 import useAuthParam from '../../hooks/useAuthParam';
 import { useEffect } from 'react';
+import { BiSearch } from 'react-icons/bi';
 
 export default function Search({ setArtist }) {
   const [searchInput, setSearchInput] = useState(localStorage.getItem('search') || 'Українські виконавці');
@@ -19,16 +18,11 @@ export default function Search({ setArtist }) {
   }, [searchInput])
   
   return (
-    <div className="search-container" elevation={3}>
-      <IconButton
-        type='button'
-        aria-label='search'
-              >
-        <SearchIcon />
-      </IconButton>
-      <InputBase
+    <div className="search-container" >
+        <BiSearch/>
+      <input
+      type="text"
         className='inputBase'
-        inputProps={{ 'aria-label': 'Введіть назву гурту' }}
         placeholder='Введіть назву гурту'
         value={searchInput}
         onChange={(event) => setSearchInput(event.target.value)}

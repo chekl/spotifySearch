@@ -1,29 +1,14 @@
-import React, { useRef, useState } from 'react';
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import React, { useState } from 'react';
 import './Menu.css';
 import { Link } from 'react-router-dom';
-import { Divider } from '@mui/material';
+import {FiMenu} from 'react-icons/fi'
 
-export default function BasicMenu() {
-  const [anchorEl, setAnchorEl] = useState(null);
-  const nofollow = useRef('nofollow');
+export default function Menu() {
   return (
-    <div>
-      <Button
-        sx={{color: 'white'}}
-        onClick={(e) => setAnchorEl(e.currentTarget)}
-      >
-        <MenuRoundedIcon color='white' />
-      </Button>
-      <Menu
-        id='basic-menu'
-        anchorEl={anchorEl}
-        open={!!anchorEl}
-        onClose={()=> setAnchorEl(null)}
-      >
-      <div className='nav-container'>
+    <div className='menu'>
+    <button  className='menuBtn'>
+      <FiMenu/>
+    </button>
          <nav className='nav'>
         <Link className='nav-link-basic' to={'/'}>
           Пошук виконавців
@@ -36,8 +21,5 @@ export default function BasicMenu() {
         </Link>
       </nav>
       </div>
-     
-      </Menu>
-    </div>
   );
 }

@@ -1,12 +1,13 @@
 .card-simple-article {
-    height: 300px;
+   height: 200px;
     width: 100%;
     font-weight: 500;
-    margin-top: 1.5rem;   
+    margin-top: 1.5rem;  
+    background-color: #fff; 
 }
 
 .card-simple-article img {
-    height: 160px;
+    height: 17vw;
     width: 100%;
     object-fit: cover;
 }
@@ -20,4 +21,7 @@
     .card-simple-article {
         height: 250px;
     }
+
+    .card-simple-article img {
+        height: 10vw; }
 }

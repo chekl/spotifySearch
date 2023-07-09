@@ -34,22 +34,23 @@ export default function AboutPage() {
           </p>
           <p>
             Поки певний функціонал знаходиться в розробці, Ви можете приєднатися
-            до наших соціальних мереж або <Link className='about-link' to={'/articles'}>почитати статті</Link>, що знаходяться на
+            до наших соціальних мереж або <Link className='about-link' to={'/articles'}>{' '}почитати статті</Link>, що знаходяться на
             сайті.
           </p>
           <p>
             Отже, залишаючись вірними духу Hark!,
-            <Link className='about-link' to={'/'}>
-              давайте підтримувати наших талановитих українських музикантів
+            <Link className='about-link' to={'/'}>{' '}
+              давайте підтримувати наших талановитих українських музикантів {" "}
             </Link>
             та допоможемо їм зростати в популярності.
           </p>
           <img
             className='authors-img'
-            src='/authors.webp'
+            src="/images/authors.webp"
             alt='Команда Hark! Українські гурти'
           />
         </PageContainer>
+        
     </>
   );
 }

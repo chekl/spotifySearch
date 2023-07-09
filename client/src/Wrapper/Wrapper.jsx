@@ -2,12 +2,12 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, useRoutes } from 'react-router-dom';
 
 import Layout from '../Layout/Layout';
-import App from '../../pages/HomePage/App';
-import Loader from '../Loader/Loader';
-const ArtistPage = lazy(() => import('../../pages/ArtistPage/ArtistPage'));
-const ArticleListPage = lazy(() => import('../../pages/ArticleListPage/ArticleListPage'));
-const AboutPage = lazy(() => import('../../pages/AboutPage/AboutPage'));
-const ArticlePage = lazy(() => import('../../pages/ArticlePage/ArticlePage'));
+import Loader from '../ui/Loader/Loader';
+const App = lazy(() => import('../pages/HomePage/App'))
+const ArtistPage = lazy(() => import('../pages/ArtistPage/ArtistPage'));
+const ArticleListPage = lazy(() => import('../pages/ArticleListPage/ArticleListPage'));
+const AboutPage = lazy(() => import('../pages/AboutPage/AboutPage'));
+const ArticlePage = lazy(() => import('../pages/ArticlePage/ArticlePage'));
 
 const Element = () => {
   let element = useRoutes([

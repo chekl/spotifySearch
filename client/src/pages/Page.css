@@ -7,12 +7,7 @@
 
 .date-container {
     display: flex;
-    justify-content: space-between;
-    width: 120px;
+    align-items: baseline;
     padding-right: 1rem;
     margin: 0 1rem 0.5rem auto;
-}
-
-.date-container em {
-    align-self: center;
 }

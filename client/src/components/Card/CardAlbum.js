@@ -1,4 +1,5 @@
 import React from 'react';
+import "./CardAlbum.css"
 
 function CardAlbum({ album }) {
   return (
@@ -8,7 +9,7 @@ function CardAlbum({ album }) {
         alt={album.name + ' фото гурту'}
         className='album-img'
       />
-      <h3>{album.name}</h3>
+      <h2>{album.name}</h2>
       <p>Дата виходу: {album.release_date}</p>
       <p>Усього треків: {album.total_tracks}</p>
     </div>

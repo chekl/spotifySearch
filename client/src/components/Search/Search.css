@@ -1,8 +1,18 @@
 .search-container {
     display: flex;
-    justify-items: start;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px;
     margin: 3rem auto;
     background-color: white;
     border-radius: 5px;
 }
 
+.inputBase {
+    border: none;
+    width: 95%
+}
+
+.inputBase:focus {
+    outline:none;
+}

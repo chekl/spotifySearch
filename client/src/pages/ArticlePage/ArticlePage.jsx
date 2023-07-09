@@ -1,16 +1,16 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import BackLink from '../../components/BackLink/BackLink';
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import BackLink from '../../ui/BackLink/BackLink';
+import { BiCalendarAlt } from 'react-icons/bi';
 import '../Page.css';
 import './ArticlePage.css';
-import { articles } from '../../articles/articles';
+import { articles } from '../../mock/articles';
 import { Helmet } from 'react-helmet';
-import ArticleFormat from '../../articles/ArticleFormat';
+import ArticleFormat from '../../utils/ArticleFormat';
 import ArticleRecomends from '../../components/ArticleRecomends/ArticleRecomends';
 import Page404 from '../Page404/Page404';
-import navigation from '../../helpers/navigation';
+import navigation from '../../utils/navigation';
 
 const ArticlePage = () => {
   let { id } = useParams();
@@ -37,7 +37,7 @@ const ArticlePage = () => {
             <BackLink />
             <h1>{article[0].title}</h1>
             <div className='date-container'>
-              <CalendarTodayIcon />
+              <BiCalendarAlt/>
               <em>{article[0].date}</em>
             </div>
             <ArticleFormat article={article} />

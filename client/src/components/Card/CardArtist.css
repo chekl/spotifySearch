@@ -1,7 +1,17 @@
 .card {
+    display: flex;
     margin: 2rem auto;
     height: max-content;
     width: 90%;
+    background-color: #fff;
+    border-radius: 5px;
+    
+}
+
+.cardImg {
+    max-width: 150px;
+    object-fit: cover;
+    border-radius: 5px 0 0 5px;
 }
 
 .card:hover {
@@ -15,13 +25,8 @@
 }
 
 .cardContent {
-    display: flex;
+padding: 1rem;
     font-weight: 500;
-}
-
-.cardImg {
-    height: inherit;
-    max-width: 150px;
 }
 
 .genreSpan {
@@ -34,7 +39,7 @@
 
 
 @media (max-width: 500px) {
-    .cardContent {
+    .card {
         flex-direction: column;
     }
 

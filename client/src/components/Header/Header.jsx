@@ -1,8 +1,8 @@
 import React from 'react';
 import useWindowWidth from '../../hooks/useWindowWidth';
-import Logo from '../Logo/Logo';
-import BasicMenu from '../Menu/Menu';
-import NavLinks from '../Links/NavLinks';
+import Logo from '../../ui/Logo/Logo';
+import Menu from '../Menu/Menu';
+import NavLinks from '../../ui/Links/NavLinks';
 import styles from './Header.module.css';
 
 export const Header = () => {
@@ -15,7 +15,7 @@ export const Header = () => {
             <NavLinks styles={styles}/>
           </nav>
       ) : (
-        <BasicMenu />
+        <Menu />
       )}
     </header>
   );

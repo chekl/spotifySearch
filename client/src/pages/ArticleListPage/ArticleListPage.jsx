@@ -1,6 +1,6 @@
 import React from 'react';
 import ArticleCard from '../../components/ArticleCard/ArticleCard';
-import { articles } from '../../articles/articles';
+import { articles } from '../../mock/articles';
 import { Helmet } from 'react-helmet';
 import PageContainer from '../../blocks/PageContainer';
 

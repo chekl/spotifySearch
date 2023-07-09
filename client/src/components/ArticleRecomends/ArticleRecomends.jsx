@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import CardArticle from '../../components/Card/CardArticle';
-import { articles } from '../../articles/articles';
+import CardRecomendArticle from '../Card/CardRecomendArticle';
+import { articles } from '../../mock/articles';
 import useWindowWidth from '../../hooks/useWindowWidth';
 import "./ArticleRecomendation.css"
 
@@ -16,7 +16,7 @@ export default function ArticleRecomends({ id }) {
         {width > 1000 ? (
           <>
             {articleList.splice(0, 5).map((article) => {
-              return <CardArticle key={article._id} article={article} />;
+              return <CardRecomendArticle key={article._id} article={article} />;
             })}
           </>
         ) : (
@@ -27,7 +27,7 @@ export default function ArticleRecomends({ id }) {
             >
               &lt;
             </button>
-            <CardArticle key={articleList[elId]._id} article={articleList[elId]} />
+            <CardRecomendArticle key={articleList[elId]._id} article={articleList[elId]} />
             <button
               className='slider'
               onClick={() => setElId(elId < articleList.length - 1 ? ++elId : 0)}

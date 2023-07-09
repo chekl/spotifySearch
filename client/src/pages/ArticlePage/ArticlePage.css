@@ -21,16 +21,12 @@
   }
   
   .article-link:hover {
-    background-color: rgb(208, 177, 240);
+    background-color: rgb(128, 0, 255);
     color:aliceblue;
   }
 
 .article-page h1 {
     font-size: 28px;
-}
-
-.date-container {
-    margin-right: 1rem;
 }
 
 @media (max-width: 1000px) {

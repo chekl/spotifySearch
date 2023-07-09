@@ -1,5 +1,5 @@
 import React from 'react'
-import BackLink from '../components/BackLink/BackLink'
+import BackLink from '../ui/BackLink/BackLink'
 
 export default function PageContainer({children}) {
   return (

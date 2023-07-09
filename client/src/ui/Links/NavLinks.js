@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import navigation from '../../helpers/navigation';
+import navigation from '../../utils/navigation';
 
 export default function NavLinks({styles}) {
   return (

@@ -1,7 +1,12 @@
 .date-container {
     display: flex;
-    align-items:flex-end;
+    align-items:center;
     justify-content: space-between;
     width: 110px;
     margin: 0 0 0.5rem auto;
+}
+
+.article-card-img {
+    width: 100%;
+    object-fit: cover;
 }

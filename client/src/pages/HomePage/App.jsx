@@ -1,9 +1,9 @@
 import './App.css';
 import { useState, useMemo } from 'react';
 import Search from '../../components/Search/Search';
-import CardGroup from '../../components/Card/CardGroup';
+import CardArtist from '../../components/Card/CardArtist';
 import { Helmet } from 'react-helmet';
-import NonArtist from '../../components/NonArtist/NonArtist';
+import NonArtist from '../../ui/NonArtist/NonArtist';
 
 function App() {
   const [artist, setArtist] = useState([]);
@@ -11,7 +11,7 @@ function App() {
   let artistsList = useMemo(() => {
     return artist.length ? (
       artist.map((group) => {
-        return <CardGroup key={group.id} group={group} />;
+        return <CardArtist key={group.id} group={group} />;
       })
     ) : (
       <NonArtist />

@@ -1,27 +1,28 @@
 .card-simple-article {
-   height: 200px;
-    width: 100%;
-    font-weight: 500;
-    margin-top: 1.5rem;  
-    background-color: #fff; 
+  height: 200px;
+  width: 100%;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  cursor: pointer;
 }
 
 .card-simple-article img {
-    height: 17vw;
-    width: 100%;
-    object-fit: cover;
+  height: 17vw;
+  width: 100%;
+  object-fit: cover;
 }
 
 .card-simple-article p {
-    font-weight: 600;
-    padding: 1rem;
+  font-weight: 600;
+  padding: 1rem;
 }
 
-@media (min-width: 1000px) {  
-    .card-simple-article {
-        height: 250px;
-    }
+@media (min-width: 1000px) {
+  .card-simple-article {
+    height: 250px;
+  }
 
-    .card-simple-article img {
-        height: 10vw; }
+  .card-simple-article img {
+    height: 10vw;
+  }
 }

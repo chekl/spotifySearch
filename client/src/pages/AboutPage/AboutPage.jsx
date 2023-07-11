@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PageContainer from '../../blocks/PageContainer';
 import { Helmet } from 'react-helmet';
-import './AboutPage.css';
 import '../Page.css';
 
 export default function AboutPage() {
@@ -34,18 +33,18 @@ export default function AboutPage() {
           </p>
           <p>
             Поки певний функціонал знаходиться в розробці, Ви можете приєднатися
-            до наших соціальних мереж або <Link className='about-link' to={'/articles'}>{' '}почитати статті</Link>, що знаходяться на
+            до наших соціальних мереж або <Link className='link' to={'/articles'}>{' '}почитати статті</Link>, що знаходяться на
             сайті.
           </p>
           <p>
             Отже, залишаючись вірними духу Hark!,
-            <Link className='about-link' to={'/'}>{' '}
+            <Link className='link' to={'/'}>{' '}
               давайте підтримувати наших талановитих українських музикантів {" "}
             </Link>
             та допоможемо їм зростати в популярності.
           </p>
           <img
-            className='authors-img'
+            className='radius-white'
             src="/images/authors.webp"
             alt='Команда Hark! Українські гурти'
           />

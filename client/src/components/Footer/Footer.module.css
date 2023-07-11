@@ -13,11 +13,6 @@ footer {
     justify-content: space-around;
 }
 
-.link {
-    color:black;
-    text-decoration: none;
-}
-
 .nav {
     display: flex;
     flex-direction: column;

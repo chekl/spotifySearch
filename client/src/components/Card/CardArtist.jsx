@@ -6,7 +6,7 @@ export default function CardArtist({group}) {
   const {id, images, name, followers, genres} = group;
   const navigation = useNavigate();
   return (
-    <div className='card' onClick={() =>navigation(`/${id}`)}>
+    <div className='card radius-white' onClick={() =>navigation(`/${id}`)}>
           <img
             src={images.length > 0 ? images[0].url : 'noimage.png'}
             alt={name + ' фото гурту'}

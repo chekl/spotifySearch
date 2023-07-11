@@ -13,7 +13,7 @@ const Footer = () => {
         </div>
         <div className={styles.nav}>
           <b>Внутрішні посилання:</b>
-          <NavLinks styles={styles} />
+          <NavLinks/>
         </div>
         <div>
           <b>Ми у соціальних мережах:</b>

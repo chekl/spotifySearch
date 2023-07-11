@@ -1,7 +1,6 @@
 .article-img {
     width: 90%;
     height: 45vw;
-    object-fit: cover;
     padding: 1rem;
     margin: 1rem 5%;
 }
@@ -10,21 +9,6 @@
     display: flex;
 }
 
-.article-container {
-    width: 90%
-}
-
-.article-link {
-    text-decoration: none;
-    font-weight: 500;
-    color: black;
-  }
-  
-  .article-link:hover {
-    background-color: rgb(128, 0, 255);
-    color:aliceblue;
-  }
-
 .article-page h1 {
     font-size: 28px;
 }
@@ -32,11 +16,6 @@
 @media (max-width: 1000px) {
     .article-page {
         display: block;
-        width: 100%;
-        margin: 0;
-    }
-
-    .article-container {
         width: 100%;
     }
 }

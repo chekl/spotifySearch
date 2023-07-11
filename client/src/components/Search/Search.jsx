@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { useState } from 'react';
 import { getArtistsByGenre } from '../../API/spotifyServises';
 import './Search.css';
@@ -18,11 +18,10 @@ export default function Search({ setArtist }) {
   }, [searchInput])
   
   return (
-    <div className="search-container" >
+    <div className="search-container radius-white" >
         <BiSearch/>
       <input
       type="text"
-        className='inputBase'
         placeholder='Введіть назву гурту'
         value={searchInput}
         onChange={(event) => setSearchInput(event.target.value)}

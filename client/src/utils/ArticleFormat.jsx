@@ -27,7 +27,7 @@ export default function ArticleFormat({article}) {
 
                   {link.length > 1 &&
                     <p>{link[0]} <strong>
-                  <a className="article-link" href={article[0].link}>{link[1]}</a>
+                  <a className="link" href={article[0].link}>{link[1]}</a>
                   </strong>
                   {link.length > 2 && link[2]}
                 </p>
@@ -46,7 +46,7 @@ export default function ArticleFormat({article}) {
 
                   {link.length > 1 &&
                     <p>{link[0]} <strong>
-                  <a className="article-link" href={article[0].link}>{link[1]}</a>
+                  <a className="link" href={article[0].link}>{link[1]}</a>
                   </strong>
                   {link.length > 2 && link[2]}
                 </p>

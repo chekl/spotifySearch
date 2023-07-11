@@ -1,72 +1,29 @@
-.motto {
-  padding: 1.5rem 0 2rem 5%;
-  width: 100%;
-}
-
 .motto p:nth-child(2) {
   animation: 3s slide forwards;
 }
 
- .motto p:last-child {
+.motto p:last-child {
   animation: 3s last-slide forwards ;
 } 
 
 .motto p{
   color: white;
-  font-size: 80px;
-  line-height: 4rem;
+  font-size: 5vw;
   font-weight: 900;
   font-family: sans-serif;
+  line-height: 1em;
 }
 
 @keyframes slide {
-  from {
-    padding-left: 5%;
-  }
   to {
-    padding-left: 20%;
+    padding-left: 27%;
   }
  }
 
 
 @keyframes last-slide {
-  from {
-    padding-left: 5%;
-  }
   to {
-    padding-left: 50%;
+    padding-left: 60%;
   }
 }
-
-
-@media (max-width: 1000px) {
-.motto p{
-  font-size: 50px;
-  line-height: 3rem;
-}
-}
-
-@media (max-width: 700px) {
-.motto {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-  .motto p{
-  font-size: 40px;
-  line-height: 2rem;
-}
-}
-
-@media (max-width: 500px) {
-  .motto {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .motto p{
-    font-size: 30px;
-    line-height: 1.8rem;
-  }
-  }
 

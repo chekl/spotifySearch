@@ -3,23 +3,19 @@
   margin: 0;
   padding: 0;
   font-size: 16px;
-  line-height: 1.3rem;
+  line-height: normal;
 }
 
 #root {
   width: 100vw;
   min-height: 100vh;
-  font-family: "Montserrat";
- background: rgb(82,32,169);
- background: linear-gradient(186deg, rgba(82,32,169,1) 15%, rgba(111,51,164,1) 100%);}
-
- h1, h2, h3, h4 {
-  line-height: 2rem;
-}
-
-h1 {
-  font-size: 24px;
-  margin-bottom: 1rem;
+  font-family: 'Montserrat';
+  background: rgb(82, 32, 169);
+  background: linear-gradient(
+    186deg,
+    rgba(82, 32, 169, 1) 15%,
+    rgba(111, 51, 164, 1) 100%
+  );
 }
 
 body::-webkit-scrollbar {
@@ -30,18 +26,45 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
 }
 
 img {
   max-width: 100%;
   display: block;
+  object-fit: cover;
 }
 
-
-input,
-button,
-textarea,
-select {
+input {
   font: inherit;
+  border: none;
+  width: 95%
+}
+
+input:focus {
+  outline:none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.link {
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+}
+
+.link-white {
+  text-decoration: none;
+  color:aliceblue;
+  font-weight: 600;
+}
+
+.link-wave:hover{
+  text-decoration: wavy underline;
+}
+
+.radius-white {
+  background-color: white;
+  border-radius: 5px;
 }

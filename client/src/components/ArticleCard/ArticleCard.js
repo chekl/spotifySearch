@@ -8,7 +8,7 @@ import './ArticleCard.css'
 const ArticleCard = ({article}) => {
   const navigation = useNavigate();
   return (
-    <div className='page-container' onClick={() => navigation(`/articles/${article._id}`)}>
+    <div className='page-container radius-white' onClick={() => navigation(`/articles/${article._id}`)}>
          <img
          className='article-card-img'
           height="400px"

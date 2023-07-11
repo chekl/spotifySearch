@@ -22,7 +22,6 @@
 
 @media (max-width: 1000px) {    
     .list-container {
-        height: 350px;
         margin: 0rem auto;
         padding-top: 1rem;
         width: 100%;
@@ -30,9 +29,7 @@
 
     .list {
         display: flex;
-        height: 300px;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 1rem;
     }
 }

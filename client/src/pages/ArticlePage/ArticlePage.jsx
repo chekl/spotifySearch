@@ -1,7 +1,6 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import BackLink from '../../ui/BackLink/BackLink';
 import { BiCalendarAlt } from 'react-icons/bi';
 import '../Page.css';
 import './ArticlePage.css';
@@ -11,6 +10,7 @@ import ArticleFormat from '../../utils/ArticleFormat';
 import ArticleRecomends from '../../components/ArticleRecomends/ArticleRecomends';
 import Page404 from '../Page404/Page404';
 import navigation from '../../utils/navigation';
+import PageContainer from '../../blocks/PageContainer';
 
 const ArticlePage = () => {
   let { id } = useParams();
@@ -33,15 +33,14 @@ const ArticlePage = () => {
       </Helmet>
       
         <div className='article-page'>
-          <div className='page-container article-container'>
-            <BackLink />
+          <PageContainer>
             <h1>{article[0].title}</h1>
             <div className='date-container'>
               <BiCalendarAlt/>
               <em>{article[0].date}</em>
             </div>
             <ArticleFormat article={article} />
-          </div>
+          </PageContainer>
           <ArticleRecomends id={id} />
         </div>
     </>
